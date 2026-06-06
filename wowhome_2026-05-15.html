@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEL 是什麼？——為什麼華鴻的老師會花時間問「今天心情怎麼樣」｜華鴻文理補習班</title>
+<meta name="description" content="SEL（社會情緒學習）這幾年在學校越來越常聽到，但對家長來說很抽象。這篇用補習班裡會發生的小事告訴你 SEL 在日常的樣子，以及為什麼我們認為它和成績一樣重要——甚至更重要。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+
+
+/* ===== HAND-DRAWN V5 INJECTED ===== */
+  /* ── Design Tokens（hand-drawn overlay）─────────────── */
+  :root {
+    --hd-paper: #fbf6ee;
+    --hd-paper-grid: rgba(45, 42, 38, 0.06);
+    --hd-ink: #2d2a26;
+    --hd-pencil: #5a564d;
+    --hd-red: #e84a3a;
+    --hd-yellow: #f7c84b;
+    --hd-blue: #4a86e0;
+    --hd-green: #4fb585;
+    --hd-pink: #e8779e;
+    --hd-highlighter: rgba(247, 200, 75, 0.5);
+    --hd-radius-rough: 24px 18px 22px 16px / 16px 22px 18px 24px;
+    --hd-radius-rough-sm: 14px 10px 12px 8px / 8px 12px 10px 14px;
+    --hd-font-body: 'PingFang TC', 'Noto Sans TC', system-ui, sans-serif;
+  }
+
+  /* ── body：紙質米色 + 細格紋 + 咖啡漬 ── */
+  body {
+    background-color: var(--hd-paper) !important;
+    background-image:
+      linear-gradient(var(--hd-paper-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hd-paper-grid) 1px, transparent 1px) !important;
+    background-size: 22px 22px !important;
+    background-attachment: fixed !important;
+    font-family: var(--hd-font-body) !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.78 !important;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    width: 320px; height: 240px;
+    top: 22%; right: 3%;
+    background: radial-gradient(ellipse, rgba(120, 80, 50, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    width: 200px; height: 160px;
+    bottom: 8%; left: -40px;
+    background: radial-gradient(ellipse, rgba(120, 80, 50, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── topbar：紙質 + 黃下緣硬陰影 ── */
+  .topbar {
+    background: var(--hd-paper) !important;
+    border-bottom: 2.5px solid var(--hd-ink) !important;
+    box-shadow: 0 5px 0 -2px var(--hd-yellow), 0 6px 12px rgba(45, 42, 38, 0.08) !important;
+  }
+  .brand-name {
+    color: var(--hd-ink) !important;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 1.5px !important;
+  }
+  .brand-mark {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    box-shadow: 2px 2px 0 var(--hd-ink) !important;
+    border-radius: 8px 6px 9px 5px / 5px 9px 6px 8px !important;
+    transform: rotate(-4deg);
+  }
+  .back-btn {
+    color: var(--hd-ink) !important;
+    border: 2px solid var(--hd-ink) !important;
+    background: transparent !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    font-family: var(--hd-font-body) !important;
+    box-shadow: 2px 2px 0 var(--hd-ink) !important;
+    transform: rotate(-1deg);
+    transition: transform .12s, box-shadow .12s !important;
+  }
+  .back-btn:hover {
+    background: var(--hd-yellow) !important;
+    transform: rotate(-2deg) translate(-1px, -1px) !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+  }
+
+  /* ── article ── */
+  article { position: relative; z-index: 1; }
+
+  /* ── 軸別便利貼 ── */
+  .axis-tag {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    padding: 7px 16px !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+    transform: rotate(-1.8deg);
+    display: inline-block !important;
+    margin-right: 10px;
+    font-family: var(--hd-font-body) !important;
+  }
+  .meta-row { gap: 14px !important; margin-bottom: 28px !important; }
+  .meta-row > span:not(.axis-tag) {
+    color: var(--hd-pencil) !important;
+    font-size: 13px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+
+  /* ── h1.title：粗黑體 + 紅波浪線 ── */
+  h1.title {
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.45 !important;
+    margin-bottom: 18px !important;
+    position: relative;
+    padding-bottom: 14px;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 0.5px !important;
+  }
+  h1.title::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: min(400px, 100%);
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 15 0 30 4 T 60 4 T 90 4 T 120 4' stroke='%23e84a3a' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 120px 8px;
+    opacity: 0.7;
+  }
+
+  /* ── lead：螢光筆漸層 + 不規則圓角 + 旋轉 + 手繪箭頭 ── */
+  .lead {
+    background: linear-gradient(180deg, rgba(247,200,75,0.06) 0%, rgba(247,200,75,0.42) 50%, rgba(247,200,75,0.06) 100%) !important;
+    border-left: 4px solid var(--hd-yellow) !important;
+    border-radius: var(--hd-radius-rough) !important;
+    padding: 22px 26px !important;
+    margin: 36px 0 56px !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.9 !important;
+    transform: rotate(-0.3deg);
+    position: relative;
+    font-size: 16.5px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+  .lead::after {
+    content: '';
+    position: absolute;
+    right: 16px; bottom: -36px;
+    width: 60px; height: 48px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 48'%3E%3Cpath d='M8 6 Q 22 22 30 32 Q 38 40 48 32' stroke='%23e84a3a' stroke-width='2.3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M42 30 L 50 34 L 46 42' stroke='%23e84a3a' stroke-width='2.3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transform: rotate(6deg);
+    pointer-events: none;
+  }
+
+  /* ── article p：body 字體 + 深墨 + 紅蠟筆 strong ── */
+  article p {
+    font-family: var(--hd-font-body) !important;
+    color: var(--hd-ink) !important;
+    font-size: 16.5px !important;
+    line-height: 1.88 !important;
+    margin: 22px 0 !important;
+  }
+  article p strong {
+    color: var(--hd-ink) !important;
+    background: linear-gradient(180deg, transparent 56%, var(--hd-highlighter) 56%);
+    padding: 0 3px;
+    font-weight: 700 !important;
+  }
+
+  /* ── h2：✦ 星星 + 黃波浪線 ── */
+  article h2 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: var(--hd-ink) !important;
+    margin: 48px 0 18px !important;
+    padding-bottom: 8px !important;
+    border-bottom: none !important;
+    position: relative;
+    display: inline-block;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 0.3px !important;
+  }
+  article h2::before {
+    content: '✦' !important;
+    display: inline-block !important;
+    width: auto !important; height: auto !important;
+    background: none !important;
+    color: var(--hd-red) !important;
+    margin-right: 10px !important;
+    font-size: 18px !important;
+    vertical-align: middle !important;
+    border-radius: 0 !important;
+    transform: rotate(-12deg);
+  }
+  article h2::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 6' preserveAspectRatio='none'%3E%3Cpath d='M0 3 Q 15 0 30 3 T 60 3 T 90 3 T 120 3' stroke='%23f7c84b' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 120px 6px;
+    opacity: 0.85;
+  }
+
+  /* ── blockquote：黃便利貼 + 大紅引號 ── */
+  blockquote {
+    background: var(--hd-yellow) !important;
+    border: none !important;
+    border-radius: var(--hd-radius-rough) !important;
+    padding: 26px 28px 24px 56px !important;
+    color: var(--hd-ink) !important;
+    font-style: normal !important;
+    font-family: var(--hd-font-body) !important;
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+    box-shadow: 4px 5px 0 rgba(45, 42, 38, 0.18), 0 1px 1px rgba(45, 42, 38, 0.08) !important;
+    transform: rotate(-0.8deg);
+    margin: 36px 0 !important;
+    position: relative;
+  }
+  blockquote::before {
+    content: '\201C' !important;
+    font-size: 64px !important;
+    color: var(--hd-red) !important;
+    position: absolute !important;
+    left: 14px !important; top: 10px !important;
+    line-height: 1 !important;
+    vertical-align: top !important;
+    margin-right: 0 !important;
+    font-family: Georgia, serif !important;
+    transform: rotate(-6deg);
+  }
+
+  /* ── endnote：粉便利貼 ── */
+  .endnote {
+    background: var(--hd-pink) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: var(--hd-radius-rough) !important;
+    border-top: none !important;
+    box-shadow: 4px 5px 0 rgba(45, 42, 38, 0.18) !important;
+    transform: rotate(0.6deg);
+    padding: 24px 28px !important;
+    font-family: var(--hd-font-body) !important;
+    text-align: left !important;
+    margin-top: 56px !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+  .endnote strong {
+    color: #fff !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 10px !important;
+    opacity: 0.85;
+    display: block !important;
+    text-transform: uppercase !important;
+  }
+
+  /* ── footer-card：紅票根 + 黑硬陰影 ── */
+  .footer-card {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    border-radius: var(--hd-radius-rough) !important;
+    border-top: none !important;
+    box-shadow: 5px 6px 0 var(--hd-ink) !important;
+    transform: rotate(-0.4deg);
+    margin: 40px auto 72px !important;
+    max-width: 680px !important;
+    padding: 26px 28px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+  .footer-card h3 {
+    color: var(--hd-yellow) !important;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 2px !important;
+  }
+  .footer-card p {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* ── share-fab：手繪 CTA（紅 + 黑硬陰影 + 不規則圓角微旋轉） ── */
+  .share-fab {
+    background: var(--hd-red) !important;
+    border: 2px solid var(--hd-ink) !important;
+    border-radius: 50% !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+    transform: rotate(-3deg);
+  }
+  .share-fab:hover {
+    background: var(--hd-red) !important;
+    transform: scale(1.06) rotate(-5deg) !important;
+    box-shadow: 5px 5px 0 var(--hd-ink) !important;
+  }
+  .share-fab::after {
+    background: var(--hd-ink) !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    font-family: var(--hd-font-body) !important;
+  }
+/* ===== /HAND-DRAWN V5 ===== */
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">SEL 介紹</span>
+    <span>2026-05-15</span>
+    <span>·</span>
+    <span>寫給對教養有興趣的家長</span>
+  </div>
+  <h1 class="title">SEL 是什麼？——為什麼華鴻的老師會花時間問「今天心情怎麼樣」</h1>
+
+  <div class="lead">
+    SEL（社會情緒學習）這幾年在學校跟媒體越來越常聽到，但對家長來說可能還是很抽象。這篇用補習班裡會發生的小事，告訴你 SEL 在日常的樣子，以及為什麼我們認為它和成績一樣重要——甚至更重要。
+  </div>
+
+  <p>每天下午四點半，孩子們陸續走進補習班。我們老師會做一件家長偶爾覺得奇怪的事——蹲下來，問每個孩子一句：「今天心情怎麼樣？」</p>
+
+  <p>有些孩子會說「還可以」；有些會說「有點煩」；有的會皺著眉說「不知道」。偶爾會有一個孩子停下來想兩秒，然後說：「老師，今天班上有一個同學罵我，我現在還在難過。」</p>
+
+  <p>那一句話講出來之後，我們可能會多陪他兩分鐘，再讓他坐下來寫作業。</p>
+
+  <p>很多家長第一次看到這個流程，會問：「老師，你們為什麼花這個時間？反正他來補習班就是寫作業啊。」</p>
+
+  <p>因為一個還沒從「被罵」裡走出來的孩子，是沒辦法寫作業的。他人坐在那裡，腦袋還在剛才那個操場。這就是 SEL 想處理的事。</p>
+
+  <h2>SEL 是什麼？三個字拆開講</h2>
+
+  <p>SEL 的全名是 <strong>Social Emotional Learning</strong>，中文一般翻成「社會情緒學習」。聽起來很學術，但拆開看其實很簡單：</p>
+
+  <p>它是一種能力的學習——學會<strong>知道自己現在的狀態</strong>（我是難過還是只是餓了？）、學會<strong>處理自己的情緒</strong>（生氣的時候怎麼不破壞東西？）、學會<strong>讀懂別人</strong>（同學是真的不想跟我玩，還是只是今天心情不好？）、學會<strong>跟別人相處</strong>（吵架以後怎麼修復？）、學會<strong>為自己的選擇負責</strong>（這件事是我自己決定的，後果我接）。</p>
+
+  <p>這五件事，學校的數學課不會教、英文課也不會教，但它們會決定一個孩子未來能不能跟同事合作、能不能承受挫折、能不能在 30 歲的時候還記得自己是誰。</p>
+
+  <blockquote>
+    SEL 不是「另外多上一堂課」，也不是「在學科以外要加的東西」。它是學科能不能裝得進去的「底層作業系統」。
+  </blockquote>
+
+  <h2>SEL 在補習班是怎麼運作的</h2>
+
+  <p>我們沒有開一堂叫「SEL 課」的東西。SEL 就<strong>融在每一天的日常裡</strong>，比如：</p>
+
+  <p>下午四點半的那一句「今天心情怎麼樣」——讓孩子練習「察覺自己現在的狀態」。這就是 SEL 的第一塊，叫自我覺察。</p>
+
+  <p>下午五點，有兩個孩子為了一支鉛筆吵起來。老師不會立刻判誰對誰錯，而是把兩個人帶到旁邊，先問：「你現在是什麼感覺？」再問：「你猜他現在是什麼感覺？」——這在練 SEL 的第三塊，社會覺察。</p>
+
+  <p>晚上六點，一個孩子因為這次小考錯太多想哭。老師會說：「考差是不舒服的，你想哭也可以。哭完我們再來看看哪裡可以調整。」——這在練 SEL 的第二塊，情緒管理。不是壓抑情緒，是「允許情緒，然後處理事情」。</p>
+
+  <p>這些瞬間在補習班一天裡會發生幾十次。我們不會大聲說「我們現在在上 SEL」，但它確實在每天進行。</p>
+
+  <h2>為什麼 SEL 重要——研究怎麼說</h2>
+
+  <p>2011 年美國一份統合分析（跨 270,000 名學生、213 個研究），發現有系統做 SEL 的學生，<strong>學業成績平均比對照組高 11 個百分點</strong>。台灣本土的研究也指向類似結論：情緒穩定、有人際支持的孩子，學習效率明顯較高、輟學率較低、青春期出狀況的機率較低。</p>
+
+  <p>但比起這些數字，我們更願意講我們自己看到的——一個會說「老師我今天有點煩」的孩子，比一個悶不吭聲的孩子，更容易把作業寫好。因為他知道自己怎麼了，他就有辦法處理。不知道自己怎麼了的孩子，能量會全部卡在內耗裡，沒得用在學習上。</p>
+
+  <h2>家長在家也能做的一件事</h2>
+
+  <p>不需要報名 SEL 課程，也不需要買 SEL 書單。從今晚開始，吃晚餐的時候多問一句：</p>
+
+  <p><strong>「你今天什麼時候覺得最開心？什麼時候最不舒服？」</strong></p>
+
+  <p>剛開始問，孩子可能會說「不知道」或「就那樣啊」——這很正常。多問幾週，他會開始有答案。再多幾個月，他會開始主動告訴你。</p>
+
+  <p>那一刻起，你就在陪他練 SEL。不需要任何教材。</p>
+
+  <p>會讀書，也要會做人。我們相信前者是結果、後者是原因；而 SEL，是後者裡最基礎的那一塊。先有 SEL，才談會考；先看懂自己，才看得懂題目。順序，從來都不能顛倒。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    SEL · 社會情緒學習 · 自我覺察 · 情緒管理 · 非認知能力 · 正向教養 · 品牌深耕
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-15_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

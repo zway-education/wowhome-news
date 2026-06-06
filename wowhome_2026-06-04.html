@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>嘿，這篇是寫給你的——你下午做的那件小事，老師都看到了｜華鴻文理補習班</title>
+<meta name="description" content="今天這篇不是寫給爸爸媽媽的，是寫給每天背著書包走進補習班的你。上禮拜三下午，你幫了一個卡住的同學、把椅子推回去、把橡皮擦屑撥進垃圾桶——這些沒有人規定你做的小事，老師全都看在眼裡。會寫功課很棒，願意多看別人一眼，更棒。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">安親日常</span>
+    <span>2026-06-04</span>
+    <span>·</span>
+    <span>寫給每天來補習班的你</span>
+  </div>
+  <h1 class="title">嘿，這篇是寫給你的——你下午做的那件小事，老師都看到了</h1>
+
+  <div class="lead">
+    今天這篇不是寫給爸爸媽媽的，是寫給你的——對，就是每天背著書包、下午走進補習班的你。我們來聊聊那段時間，有哪些你以為沒人注意、其實老師都記得的小事。
+  </div>
+
+  <p>三點半，門一打開，你們像一群麻雀一樣衝進來。有人先跑去喝水，有人書包還沒放好就喊「老師我餓了」，也有人安安靜靜走到位子上，把鉛筆盒打開。老師站在門口，一個一個，其實都看在眼裡。</p>
+
+  <p>你可能覺得，這些都只是每天都在發生的小事，沒什麼好說的。可是老師想告訴你一個祕密——<strong>常常就是這些你以為的小事，是老師心裡記最久的事。</strong></p>
+
+  <blockquote>
+    你以為沒人看見的那些小動作，其實老師都偷偷記在心裡了。
+  </blockquote>
+
+  <p>上禮拜三就有一件。坐你旁邊的阿樂，數學寫到一半卡住了，眉頭皺得緊緊的，橡皮擦都快擦破紙。那時候你已經寫完，本來可以拿出課外書來看。可是你沒有。你把椅子挪過去，小小聲跟他說：「這題我剛剛也錯，我教你。」</p>
+
+  <p>老師沒有出聲，站在後面看了好一會兒。你知道嗎，那一刻，比你考一百分還讓老師開心。因為考一百分，是你把自己顧好；而回頭幫一個卡住的同學，是你開始<strong>看得見「別人」</strong>。這件事沒有人教得來，是你自己選的。</p>
+
+  <p>補習班從來不是只有寫功課的地方。你把寫完的桌子擦乾淨、把椅子輕輕推回去、把地上的橡皮擦屑撥進垃圾桶——這些沒有人規定你做的事，老師全都收進眼睛裡了。會寫功課，很棒；願意多做一點點、多看別人一眼，更棒。</p>
+
+  <p>所以啊，下次你又第一個寫完的時候，先別急著衝去玩。抬頭看看旁邊，說不定正好有個人，需要你那句「我教你」。那句話，你已經學會了。下禮拜三下午，老師在門口等你。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    安親日常 · 下午時光 · 會做人 · 同理心 · 互相幫忙
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-06-04_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「他不是不會，是還在想」——每個孩子都有自己的學習節奏｜華鴻文理補習班</title>
+<meta name="description" content="週二晚上的安親班，小宇對著一題數學卡了好一陣子。我原本要過去講解，但停下來看了一眼——他的手指在桌上比劃，嘴巴小聲念。他不是發呆，他正在試。多等三分鐘，他自己就過關了。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">覺知教育</span>
+    <span>2026-05-19</span>
+    <span>·</span>
+    <span>寫給在班家長</span>
+  </div>
+  <h1 class="title">「他不是不會，是還在想」——每個孩子都有自己的學習節奏</h1>
+
+  <div class="lead">
+    週二晚上的安親班，小宇對著一題數學卡了好一陣子。我原本要過去講解，但停下來看了一眼——他的手指在桌上比劃，嘴巴小聲念。他不是發呆，他正在試。多等三分鐘，他自己就過關了。
+  </div>
+
+  <p>週二晚上七點四十分，安親班教室。我巡完一圈，看到小宇——四年級——筆停在桌上，眼睛望著數學課本，好幾分鐘沒動。</p>
+
+  <p>當下我有個直覺：「過去問他卡在哪。」這幾乎是老師的反射動作。一個孩子卡住，就過去拆題、講解、帶他走過一遍。三分鐘解決，他抄下來，這一頁就過去了。</p>
+
+  <p>但我停了一下。</p>
+
+  <h2>先看他在做什麼</h2>
+
+  <p>我多看了一眼。他的手指在桌面上輕輕比劃，嘴巴小小聲念著什麼。我聽不清楚，但<strong>那不是「我放棄了」的姿勢，是「我在想」的姿勢</strong>。</p>
+
+  <p>他不是不會，他在試自己拆。</p>
+
+  <p>我退到旁邊整理另一桌的考卷，沒過去打斷他。心裡其實有點掙扎——七點四十分了，他這題寫完還有兩頁。如果讓我帶，五分鐘可以收尾。讓他自己想，可能要十分鐘，也可能想不出來。</p>
+
+  <blockquote>
+    可是「想不出來」也是一種收穫。他至少知道：哦，這條路我走過了，不通。下次我會試別的方向。
+  </blockquote>
+
+  <h2>三分鐘後，他自己過關了</h2>
+
+  <p>大概三分鐘後，我餘光看到他突然動筆，在草稿紙上畫了一條線——把題目裡的兩個條件連起來。然後他抬頭看了我一眼，嘴角有點上揚，是那種「我以為我不會，結果我會」的表情。</p>
+
+  <p>如果剛剛我搶著教，這個表情就不會出現。他會多一道解出來的題，但少一次<strong>「我自己想出來了」</strong>的體驗。對一個四年級的孩子來說，後者比前者重要得多。</p>
+
+  <p>我們常說孩子要有學習動機，但動機不是用講的——是這樣一次一次累積出來的。</p>
+
+  <h2>每個孩子都有自己的學習節奏</h2>
+
+  <p>教書的人有一個反射動作——想趕快幫孩子過完這一頁。時間真的不夠，這是事實。但有時候多等三分鐘，<strong>那一題就會變成他的，而不是老師的</strong>。</p>
+
+  <p>家裡其實也是。下次孩子寫功課卡住，先別急著湊過去。看一眼他在做什麼——是真的不會，還是正在試。如果他在試，就讓他試完。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    覺知教育 · 安親班觀察 · 先看懂孩子 · 學習動機 · 不打斷 · 自主學習 · 等的力量
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-19_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

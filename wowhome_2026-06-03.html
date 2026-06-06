@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEL 的第二塊：認得了情緒，然後呢？——陪孩子練習「按一下暫停」｜華鴻文理補習班</title>
+<meta name="description" content="上週談過 SEL 的第一塊是認得自己的感覺。但認得了之後，孩子常常還是一秒就爆。SEL 的第二塊「自我管理」不是要孩子忍住、不生氣，而是幫他在『感覺』和『動手』之間，多撐出一點點空隙。這是可以練的，補習班怎麼練，這篇講給你聽。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">SEL 介紹</span>
+    <span>2026-06-03</span>
+    <span>·</span>
+    <span>寫給對教養與 SEL 有興趣的家長</span>
+  </div>
+  <h1 class="title">SEL 的第二塊：認得了情緒，然後呢？——陪孩子練習「按一下暫停」</h1>
+
+  <div class="lead">
+    前陣子聊過，SEL 的第一塊是幫孩子「認得自己的感覺」。但很多家長後來問我同一句話：他明明知道自己在生氣，為什麼還是一秒就動手？這就是 SEL 的第二塊要回答的——認得了，然後呢？
+  </div>
+
+  <p>有個三年級的孩子，我們叫他阿毅。他其實很會講自己的情緒，被問起來會說「我現在很煩」「我快氣炸了」，講得清清楚楚。可是話一說完，下一秒橡皮擦已經砸到隔壁同學身上了。</p>
+
+  <p>他媽媽很困惑：「我們在家很努力教他認情緒，他也都會講啊，怎麼還是一樣衝動？」這個困惑很有道理。<strong>認得情緒，跟管得住行為，其實是兩件不同的事。</strong></p>
+
+  <h2>自我管理，不是叫孩子「不要生氣」</h2>
+
+  <p>社會情緒學習（SEL）裡有一塊叫「自我管理」。很多人一聽就以為是「教孩子控制情緒、不要鬧」。其實不是。</p>
+
+  <p>情緒本身不需要被消滅——生氣、難過、嫉妒，都是正常的。自我管理練的不是「不要有情緒」，而是<strong>在『感覺出來』和『身體動作出來』之間，多撐出一點點空隙</strong>。就是那零點幾秒的暫停，讓孩子來得及選：我要砸過去，還是先離開一下。</p>
+
+  <p>阿毅缺的不是認得情緒的能力，是那個空隙。對他來說，「氣」和「動手」幾乎是同一個動作，中間沒有縫。我們要陪他練的，就是把那條縫慢慢撐開。</p>
+
+  <blockquote>
+    自我管理不是把情緒按掉，是在情緒和行為之間，留一個可以喘口氣、可以重新選一次的縫。
+  </blockquote>
+
+  <h2>那條縫，是怎麼一次一次練出來的</h2>
+
+  <p>我們沒有開一堂「情緒管理課」要他坐好聽。練習都藏在日常裡，很小，但每天都來。</p>
+
+  <p>第一，幫他把暫停變成一個具體動作。我們跟阿毅約好，當他覺得快要爆的時候，可以走到教室後面那張「冷靜椅」坐一下，不用報告、不用解釋，坐到想回來再回來。重點不是處罰，是給他一個「氣的時候可以去哪裡」的出口，而不是只能往同學身上去。</p>
+
+  <p>第二，幫他把那句話練順。一開始他根本說不出「我需要一分鐘」，氣上來就是行動。我們就陪他先用最短的——舉手、或比一個暫停的手勢都行。能用一個動作換掉一次出手，就是進步。</p>
+
+  <p>第三，事後一起倒帶，但不是檢討。等他平靜了，我們才回頭聊：「剛剛是哪個地方開始覺得不對的？」幫他看見情緒升起來的那個點，下次就有機會早一點按下暫停。<strong>看得見開頭，才有辦法在中間踩煞車。</strong></p>
+
+  <p>阿毅現在還是會氣，偶爾也還是會衝。但上週他氣到站起來，走到後面坐了快兩分鐘，然後自己走回來——沒砸任何東西。那兩分鐘，就是他這陣子一點一點撐出來的縫。</p>
+
+  <p>SEL 不是一堂課，是這樣一天一天、一個動作一個動作累積的。先認得情緒，再學會跟情緒之間留一點餘地。下一塊，我們再聊孩子怎麼開始看懂「別人」的情緒。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    SEL · 社會情緒學習 · 自我管理 · 情緒調節 · 衝動控制
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-06-03_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「他講了好久，我還是聽不懂」——4C 的溝通力，其實不是「比較會講話」｜華鴻文理補習班</title>
+<meta name="description" content="孩子明明很愛講話，卻常常講了一大串，大人還是聽不懂發生什麼事。這篇從一位媽媽的擔心說起，談 4C 素養力裡很常被誤會的一塊——Communication 溝通力。它不是「比較敢講」，而是「能不能讓對方接住」，而這件事，安靜的孩子也能做得很好。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">4C 素養力</span>
+    <span>2026-06-06</span>
+    <span>·</span>
+    <span>寫給對教養有興趣的家長</span>
+  </div>
+  <h1 class="title">「他講了好久，我還是聽不懂」——4C 的溝通力，其實不是「比較會講話」</h1>
+
+  <div class="lead">
+    有個媽媽跟我說，她兒子每天放學都很愛講話，可是常常講了一大串，她到最後還是不知道發生了什麼事。她有點擔心：「他是不是表達能力不好？」今天想聊 4C 素養力裡很常被誤會的一塊——Communication 溝通力。它不是「比較敢講、比較會說」，而是「能不能讓對方接住你想說的」。而這件事，安靜的孩子也可以做得很好。
+  </div>
+
+  <p>小宇是個話很多的孩子。放學一上車就開始講：「然後他就……可是那個……結果老師說……」媽媽一邊開車一邊「嗯、嗯」，等紅燈的時候忍不住問：「所以到底是誰跟誰吵架？」小宇愣了一下，想了想，說：「我不知道怎麼講。」</p>
+
+  <p>媽媽後來跟我說這件事，語氣有點焦慮：「他明明那麼愛說話，怎麼會講不清楚？是不是該帶他去上個口才班？」</p>
+
+  <p>我懂這個擔心。但我想先把一個很常見的誤會講開——<strong>愛講話，跟溝通力好，是兩件事</strong>。</p>
+
+  <h2>溝通力不是「會講話」，是「讓對方接得住」</h2>
+
+  <p>講到「溝通力好」，很多人腦中浮現的，是那種口齒清晰、上台不怯場、可以滔滔不絕的孩子。這當然是一種能力，但它只是溝通的其中一面，而且不是最關鍵的那一面。</p>
+
+  <p>國際組織在談 21 世紀技能時，把 Communication 跟 Critical Thinking、Creativity、Collaboration 並列為孩子未來的核心能力（也就是常聽到的 4C 素養力）。在這套定義裡，溝通力指的是——<strong>能把腦中的想法，整理成對方接得住的樣子；也能聽懂對方真正想說的</strong>。</p>
+
+  <p>請注意這句話的兩半。一半是「說」——把心裡的東西，講到對方懂。另一半常常被忽略，是「聽」——接住對方的意思。一個只顧著把話倒出來、卻沒在看對方有沒有跟上的孩子，話再多，也還沒真的學會溝通。</p>
+
+  <p>這就是為什麼，小宇「很愛講話」卻「講不清楚」，一點都不矛盾。他有很多話想說，只是還沒學會一件事：在開口之前，先想一下「我要讓誰聽懂」。</p>
+
+  <h2>補習班怎麼陪孩子練溝通</h2>
+
+  <p>溝通力不是靠一堂口才課練出來的，是在每天「要把一件事講給別人聽」的小場合裡，一次一次長出來的。我們在華鴻試著做三件很樸素的事。</p>
+
+  <p>第一，<strong>講完一件事，多問一句「我這樣說，你聽懂了嗎？」</strong> 孩子講完之後，我們會請他回頭看一下聽的人。這個小動作，是把他的注意力，從「我說完了」挪到「對方接住了沒」。一開始他不習慣，多練幾次，他會開始自己停下來說：「我換個方式講好了。」</p>
+
+  <p>第二，<strong>先聽懂，再回應</strong>。分組討論的時候，我們有個規矩：要反對別人之前，得先用自己的話，把對方的意思說一遍——「你的意思是不是……？」說對了、對方點頭，才能接著講自己的。這一招很慢，但孩子會慢慢發現，「聽懂對方」本身，就是溝通的一半。</p>
+
+  <p>第三，<strong>給「不知道怎麼講」的孩子一個起手式</strong>。像小宇那樣卡住的孩子，其實不需要被催「快點講清楚」。我們會教他一句話：「我有一個想法，可是我還沒想好怎麼說。」——這句話本身，就是一種很成熟的溝通。它讓對方願意等，也讓孩子有時間，把話好好整理一遍。</p>
+
+  <blockquote>
+    溝通力好的孩子，不一定是講最多的那一個。常常是那個會先看著你、確認你聽懂了，才繼續往下說的孩子。
+  </blockquote>
+
+  <h2>給家長：在家可以做的一件小事</h2>
+
+  <p>如果你家也有一個「很愛講、但講不清楚」的孩子，這裡有個比送去口才班更簡單的做法：當他講得七零八落時，先別幫他把話補完，也不用追著問「所以結論到底是什麼」。試著回他一句：「你是說，先發生了 A，後來變成 B，對嗎？」</p>
+
+  <p>你在做的，是示範「把一件事整理清楚」長什麼樣子。孩子聽久了，會把這個整理的動作學起來，放進自己腦袋裡。比起糾正他「你講得好亂」，這樣的回應，更能讓他願意繼續說下去。</p>
+
+  <p>會讀書，也要會做人；先有動機，再談成績。一個能把想法說到別人懂、也能停下來聽懂別人的孩子，走到哪裡都不會太孤單。4C 的溝通力，補習班能陪著練——但真正最常派上用場的地方，其實是他跟你說話的那張餐桌。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    4C 素養力 · Communication · 溝通力 · 21 世紀技能 · 親子溝通 · 傾聽 · 品牌深耕
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-06-06_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

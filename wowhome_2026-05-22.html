@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「修復」可以很小，但要由大人先開始——爭吵之後，比道歉更重要的一件事｜華鴻文理補習班</title>
+<meta name="description" content="對孩子發完脾氣，很多家長急著道歉。但對國中的孩子來說，他在等的不只是「對不起」，而是一個「我們之間沒有斷」的訊號。關係難免有裂痕，重點是吵完之後，有沒有人願意先把手伸回來。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">正向教養</span>
+    <span>2026-05-22</span>
+    <span>·</span>
+    <span>寫給國中升學家長</span>
+  </div>
+  <h1 class="title">「修復」可以很小，但要由大人先開始——爭吵之後，比道歉更重要的一件事</h1>
+
+  <div class="lead">
+    半夜十一點多，一個媽媽傳來訊息——她又對國中的孩子大吼了，吼完自己躲在房間哭。其實，會這樣半夜自責的家長，一點都不糟。爭吵之後願不願意「修復」，往往比一篇完美的道歉更重要。
+  </div>
+
+  <p>「老師，我昨天晚上又對阿宏大吼了。吼完，我自己躲在房間裡哭。我是不是一個很糟糕的媽媽？」</p>
+
+  <p>傳來這段訊息的時候，已經是晚上十一點多。阿宏念國二，最近月考逼近，家裡的氣氛跟著一起繃緊。那天晚上的導火線其實很小——媽媽只是提醒了一句「數學講義寫了嗎」，阿宏回了一句「很煩耶，不要一直唸」，她當下就爆了。</p>
+
+  <p>她說，吼出口的那幾句話，她自己事後都記不太清楚，只記得阿宏「砰」地摔上房門，然後整個家安靜得讓人發慌。</p>
+
+  <p>我回她的第一句話是：「你不是糟糕的媽媽。會在半夜傳這段訊息給老師的媽媽，是真的很在乎孩子。」</p>
+
+  <h2>吼完之後，孩子在等的不只是道歉</h2>
+
+  <p>很多家長以為，對孩子發完脾氣，只要事後鄭重地道歉，就能把裂痕補回來。道歉當然重要，但對一個國中的孩子來說，他在等的，其實不只是那一句「對不起」。</p>
+
+  <p>這個年紀的孩子有個矛盾：他一邊很想獨立、把房門關上、宣告「我的事我自己會處理」；一邊又非常在意「我跟爸媽之間，到底還好不好」。所以當衝突爆開、房門一摔，他心裡其實也慌——<strong>他不確定剛剛那場大吼，有沒有真的把關係吼壞。</strong></p>
+
+  <p>也因此，吼完之後真正重要的，不是一篇措辭完美的道歉稿，而是一個訊號：我們之間，沒有斷。心理學上把這個過程叫做「修復」。關係難免會有裂痕，重點從來不是「永遠不吵架」，而是「吵完之後，有沒有人願意先把手伸回來」。</p>
+
+  <blockquote>
+    孩子長大後記得的，往往不是你那天吼了他什麼，而是吼完之後，你有沒有再回來找他。
+  </blockquote>
+
+  <h2>修復，可以從一頓早餐開始</h2>
+
+  <p>修復不需要很慎重，反而越自然越好。唯一的關鍵是——<strong>由大人先跨出那一步，不要等孩子先低頭。</strong></p>
+
+  <p>第一，<strong>先處理好自己。</strong>吼完的當下別急著衝去和好，先讓自己的情緒落地。帶著還沒消的怒氣去「修復」，常常只會吵起第二回合。</p>
+
+  <p>第二，<strong>動作可以很小。</strong>隔天早上一句「昨天我太大聲了，對不起」，或者只是默默把他愛吃的早餐放上桌、敲門問一句「要不要一起出門」。國中的孩子不一定會熱情回應，但他收得到。</p>
+
+  <p>第三，<strong>把話說在「那件事」上，不要說在「那個人」上。</strong>可以說「我昨天那樣吼你，是我自己情緒沒處理好」，而不是「還不是因為你態度差，我才會生氣」。前者是修復，後者是把錯又推回給孩子，等於白修了。</p>
+
+  <p>阿宏媽媽後來告訴我，隔天她什麼大道理都沒講，只在阿宏出門前說了一句「昨天媽媽口氣很差，抱歉」。阿宏沒回頭，只「嗯」了一聲。但那天放學，他主動把月考範圍傳到了家庭群組——那是他的方式，在說「我們和好了」。</p>
+
+  <p>親子之間不可能永遠不起衝突，尤其在國中這個又敏感、又正在用力長大的階段。孩子要的，從來不是一對永遠不會生氣的父母，而是一對「就算吵過，也願意先回來找他」的父母。</p>
+
+  <p>吼了，不代表你輸了。願意修復，孩子才會慢慢知道——這個家，是吵不壞的。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    正向教養 · 親子衝突 · 吼完之後 · 關係修復 · 國中教養 · 情緒落地 · 由大人先開始
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-22_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

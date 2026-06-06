@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>華鴻文理補習班｜每日教養與學習筆記</title>
+<meta name="description" content="華鴻文理補習班每日筆記：覺知教育、非認知能力、閱讀推薦、安親日常、兒童美語、升學軟實力。會讀書，也要會做人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:      #b8202e;
+    --red-dk:   #8c1520;
+    --gold:     #c9920a;
+    --gold-lt:  #fdf0cc;
+    --bg:       #f4f2ef;
+    --paper:    #ffffff;
+    --ink:      #1c1c1c;
+    --ink2:     #484848;
+    --ink3:     #909090;
+    --line:     #e4e0d8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family: 'Noto Serif TC', Georgia, serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+  h1,h2,h3,.sans,.brand-name,.filter-btn,.stat-num,.topic-tag,.nav-cta {
+    font-family: 'Noto Sans TC', Arial, sans-serif;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0 48px;
+    height: 66px;
+    position: sticky; top:0; z-index:100;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    display: flex; align-items:center; justify-content:space-between;
+  }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .brand-mark {
+    width:42px; height:42px;
+    background: linear-gradient(135deg, var(--red) 0%, #7a1020 100%);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:900; font-size:18px; color:#f5c842;
+    box-shadow: 0 3px 10px rgba(184,32,46,0.3);
+  }
+  .brand-name { font-size:17px; font-weight:700; color:var(--ink); letter-spacing:1px; }
+  .brand-sub  { font-size:10px; color:var(--ink3); letter-spacing:2.5px; margin-top:1px; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--red) 0%, #7a1020 100%);
+    color:#fff;
+    padding:9px 24px; border-radius:6px;
+    font-size:13px; font-weight:700; text-decoration:none;
+    box-shadow: 0 3px 10px rgba(184,32,46,0.25);
+    transition: opacity .2s;
+    letter-spacing:0.5px;
+  }
+  .nav-cta:hover { opacity:0.88; }
+
+  /* ── Hero（v3：紙質米色 + 手繪風，降低紅色壓力）── */
+  .hero {
+    background:
+      radial-gradient(ellipse 300px 200px at 78% 32%, rgba(120, 80, 50, 0.06) 0%, transparent 70%),
+      linear-gradient(rgba(45, 42, 38, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 42, 38, 0.04) 1px, transparent 1px),
+      #fbf6ee;
+    background-size: auto, 22px 22px, 22px 22px, auto;
+    padding: 48px 48px 44px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+  }
+  /* hero ::before/::after 已併入 background；如要加咖啡漬可重啟 */
+  .hero-inner {
+    max-width:780px; margin:0 auto;
+    position:relative; z-index:1;
+  }
+  .hero-eyebrow {
+    display:inline-block;
+    font-size:12px; font-weight:700;
+    color:var(--red);
+    letter-spacing:2.5px; text-transform:uppercase;
+    margin-bottom:18px;
+    background: rgba(247, 200, 75, 0.45);
+    padding:4px 12px;
+    border-radius: 14px 11px 13px 9px / 9px 13px 11px 14px;  /* 手繪不規則 */
+    transform: rotate(-1.5deg);
+  }
+  .hero h1 {
+    font-size:46px; font-weight:900; color:var(--ink);
+    line-height:1.3; letter-spacing:2px;
+    margin-bottom:18px;
+  }
+  /* 「讀書」用紅蠟筆圈起 */
+  .hero h1 .accent-word {
+    color:var(--red);
+    position:relative;
+    display:inline-block;
+    padding:0 6px;
+  }
+  .hero h1 .accent-word::after {
+    content:'';
+    position:absolute; inset:-6px -10px;
+    border:2.5px solid var(--red);
+    border-radius: 50% 60% 40% 55% / 50% 45% 55% 50%;
+    transform: rotate(-3deg);
+    opacity:0.7;
+    pointer-events:none;
+  }
+  /* 「做人」加螢光筆 highlight */
+  .hero h1 .accent-mark {
+    background: linear-gradient(180deg, transparent 55%, rgba(247, 200, 75, 0.55) 55%);
+    padding: 0 4px;
+  }
+  .hero-sub {
+    font-size:16.5px; color:var(--ink2);
+    max-width:580px; line-height:1.9;
+    margin-bottom:0;
+  }
+  /* 右上手繪箭頭裝飾（指向下方文章區） */
+  .hero-doodle {
+    position:absolute; right:60px; top:48px;
+    width:90px; height:60px; opacity:0.55;
+    pointer-events:none;
+    transform: rotate(8deg);
+  }
+  @media (max-width:640px) { .hero-doodle { display:none; } }
+  .hero-stats {
+    display:flex; gap:0;
+    background:rgba(0,0,0,0.2);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:12px;
+    overflow:hidden;
+    width:fit-content;
+    backdrop-filter:blur(4px);
+  }
+  .stat-box {
+    padding:16px 32px;
+    border-right:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+  }
+  .stat-box:last-child { border-right:none; }
+  .stat-num {
+    font-size:28px; font-weight:800;
+    color:#f5c842; line-height:1; margin-bottom:4px;
+  }
+  .stat-label {
+    font-size:10px; color:rgba(255,255,255,0.5);
+    letter-spacing:2.5px; font-weight:600;
+  }
+
+  /* ── Filter bar ── */
+  .filter-wrap {
+    background: var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky; top:66px; z-index:90;
+  }
+  .filters {
+    max-width:1160px; margin:0 auto;
+    padding:14px 32px;
+    display:flex; gap:8px; flex-wrap:wrap;
+  }
+  .filter-btn {
+    background:transparent;
+    border:1.5px solid var(--line);
+    padding:6px 18px; border-radius:999px;
+    font-size:13px; cursor:pointer;
+    color:var(--ink2); font-weight:500;
+    transition:all .15s;
+    white-space:nowrap;
+  }
+  .filter-btn:hover { border-color:var(--red); color:var(--red); }
+  .filter-btn.active {
+    background:linear-gradient(135deg, var(--red) 0%, #9e1a28 100%);
+    color:#fff; border-color:var(--red);
+    font-weight:700;
+    box-shadow:0 2px 8px rgba(184,32,46,0.3);
+  }
+
+  /* ── Grid ── */
+  .articles {
+    max-width:1160px; margin:0 auto;
+    padding:40px 32px 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
+    gap:22px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background:var(--paper);
+    border-radius:12px;
+    border:1px solid var(--line);
+    overflow:hidden;
+    text-decoration:none; color:inherit;
+    display:flex; flex-direction:column;
+    transition:transform .2s, box-shadow .2s;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  }
+  .card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 12px 32px rgba(0,0,0,0.12);
+    border-color:#d0cbc4;
+  }
+  .card-stripe {
+    height:4px;
+    background:linear-gradient(90deg, var(--red), var(--gold));
+    flex-shrink:0;
+  }
+  .card[data-axis="01"] .card-stripe,
+  .card[data-axis="02"] .card-stripe,
+  .card[data-axis="12"] .card-stripe {
+    background:linear-gradient(90deg, #8c1520, #b8202e);
+  }
+  .card[data-axis="03"] .card-stripe,
+  .card[data-axis="09"] .card-stripe {
+    background:linear-gradient(90deg, #2d6a4f, #52b788);
+  }
+  .card[data-axis="04"] .card-stripe,
+  .card[data-axis="07"] .card-stripe {
+    background:linear-gradient(90deg, #c9920a, #f4c430);
+  }
+  .card[data-axis="05"] .card-stripe {
+    background:linear-gradient(90deg, #1a5276, #2e86c1);
+  }
+  .card[data-axis="06"] .card-stripe,
+  .card[data-axis="10"] .card-stripe {
+    background:linear-gradient(90deg, #6c3483, #9b59b6);
+  }
+  .card[data-axis="08"] .card-stripe,
+  .card[data-axis="13"] .card-stripe {
+    background:linear-gradient(90deg, #a04000, #e67e22);
+  }
+  .card[data-axis="11"] .card-stripe {
+    background:linear-gradient(90deg, #1a7a6e, #1abc9c);
+  }
+  .card-body {
+    padding:22px 24px 20px;
+    display:flex; flex-direction:column;
+    gap:10px; flex:1;
+  }
+  .card-meta {
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  }
+  .topic-tag {
+    display:inline-block;
+    padding:3px 10px; border-radius:4px;
+    font-size:11px; font-weight:700;
+    background:var(--gold-lt); color:var(--gold);
+    letter-spacing:0.3px;
+  }
+  .card-date {
+    font-size:12px; color:var(--ink3);
+    font-family:'Noto Sans TC', sans-serif;
+  }
+  .card h3 {
+    font-size:16px; font-weight:700;
+    color:var(--ink); line-height:1.55;
+  }
+  .card-summary {
+    font-size:13px; color:var(--ink2);
+    line-height:1.75; flex:1;
+  }
+  .card-footer {
+    margin-top:10px; padding-top:10px;
+    border-top:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .card-ta   { font-size:11px; color:var(--ink3); }
+  .card-arrow {
+    font-size:16px; color:var(--red);
+    font-weight:700; opacity:0; transition:opacity .2s;
+  }
+  .card:hover .card-arrow { opacity:1; }
+
+  /* ── Card 縮圖（Unsplash 教育主題照，按 axis 自動配圖）── */
+  .card-thumb {
+    width:100%; height:180px; display:block;
+    object-fit:cover; object-position:center 38%;
+    background:linear-gradient(135deg, #f0e6dd 0%, #e8dccc 100%);
+    border-bottom:1px solid var(--line);
+    transition:transform .35s;
+  }
+  .card:hover .card-thumb { transform:scale(1.04); }
+
+  /* ── 入場動畫（hero → 書區 → filter → 卡片漸進淡入）── */
+  @keyframes wnFadeUp {
+    from { opacity:0; transform:translateY(28px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @keyframes wnFadeDown {
+    from { opacity:0; transform:translateY(-18px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .site-header { animation: wnFadeDown 0.5s ease-out both; }
+  .hero { animation: wnFadeDown 0.7s 0.1s ease-out both; }
+  .books-section { animation: wnFadeUp 0.6s 0.3s ease-out both; }
+  .filter-wrap { animation: wnFadeUp 0.5s 0.45s ease-out both; }
+  .card {
+    opacity:0;
+    animation: wnFadeUp 0.55s ease-out forwards;
+    /* animation-delay 由 JS 依卡片順序設定 */
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration:0.01ms !important;
+      animation-delay:0ms !important;
+      transition-duration:0.01ms !important;
+    }
+  }
+
+  /* ── Empty ── */
+  .empty {
+    text-align:center; padding:60px 24px;
+    color:var(--ink3); grid-column:1/-1; font-size:15px;
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    background:linear-gradient(135deg, #1a0a0c 0%, #2d1015 100%);
+    color:#fff;
+    padding:52px 32px 36px;
+    text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .site-footer::before {
+    content:'';
+    position:absolute; top:0; left:0; right:0;
+    height:3px;
+    background:linear-gradient(90deg, var(--red), var(--gold), var(--red));
+  }
+  .footer-brand {
+    font-size:18px; font-weight:800; color:#fff;
+    letter-spacing:2px; margin-bottom:8px;
+  }
+  .footer-brand span { color:#f5c842; }
+  .footer-tagline {
+    font-size:13px; color:rgba(255,255,255,0.5);
+    margin-bottom:14px; letter-spacing:1px;
+  }
+  .footer-divider {
+    width:48px; height:2px;
+    background:linear-gradient(90deg, var(--red), var(--gold));
+    margin:0 auto 24px; border-radius:1px;
+  }
+  .footer-info {
+    font-size:12px; color:rgba(255,255,255,0.4);
+    line-height:2;
+  }
+  .footer-info a { color:rgba(255,255,255,0.6); text-decoration:none; }
+  .footer-info a:hover { color:#f5c842; }
+
+  @media (max-width:640px) {
+    .site-header { padding:0 18px; }
+    .hero { padding:52px 20px 44px; }
+    .hero h1 { font-size:30px; }
+    .hero-stats { flex-direction:column; width:100%; }
+    .stat-box { border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .stat-box:last-child { border-bottom:none; }
+    .filter-wrap { top:66px; }
+    .filters { padding:10px 16px; }
+    .articles { padding:28px 16px 56px; gap:16px; }
+  }
+
+  /* ── Books Section ── */
+  .books-section {
+    background: var(--gold-lt);
+    border-top: 1px solid #e8d99a;
+    border-bottom: 1px solid #e8d99a;
+    padding: 14px 48px;
+  }
+  .books-inner {
+    max-width:1160px; margin:0 auto;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .books-label {
+    font-size:10px; font-weight:700; letter-spacing:2px;
+    color:var(--gold); text-transform:uppercase;
+    font-family:'Noto Sans TC', sans-serif;
+    white-space:nowrap; flex-shrink:0;
+  }
+  .books-divider {
+    width:1px; height:32px; background:#d4b96a; flex-shrink:0;
+  }
+  .books-list {
+    display:flex; gap:12px; flex:1; flex-wrap:wrap;
+  }
+  .book-item {
+    display:flex; align-items:center; gap:10px;
+    background:var(--paper);
+    border:1px solid #e0d0a0;
+    border-radius:8px;
+    padding:8px 14px;
+    min-width:0; flex:1;
+    text-decoration:none; color:inherit; cursor:pointer;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .book-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184,32,46,0.12);
+    border-color: var(--brand, #b8202e);
+  }
+  .book-num {
+    flex-shrink:0;
+    width:28px; height:28px;
+    background: linear-gradient(135deg, var(--red-dk), var(--red));
+    border-radius:5px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Noto Sans TC', sans-serif;
+    font-size:11px; font-weight:900; color:#f5c842;
+  }
+  .book-info { min-width:0; }
+  .book-badge {
+    font-size:9px; font-weight:700; color:var(--gold);
+    font-family:'Noto Sans TC', sans-serif;
+    letter-spacing:0.5px; margin-bottom:1px;
+  }
+  .book-title {
+    font-size:13px; font-weight:700; color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .book-vol {
+    font-size:11px; color:var(--ink3);
+    font-family:'Noto Sans TC', sans-serif;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+
+  /* ── Books Section ── */
+  .books-section {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 60px 48px;
+  }
+  .books-inner { max-width:1160px; margin:0 auto; }
+  .books-header { text-align:center; margin-bottom:40px; }
+  .books-eyebrow {
+    display:inline-block;
+    font-size:10px; font-weight:700; letter-spacing:3px;
+    color:var(--gold); text-transform:uppercase;
+    background:var(--gold-lt); padding:4px 14px; border-radius:999px;
+    margin-bottom:12px;
+  }
+  .books-title { font-size:26px; font-weight:800; color:var(--ink); margin-bottom:10px; }
+  .books-sub { font-size:12px; color:var(--ink3); max-width:500px; margin:0 auto; }
+  .books-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:18px;
+  }
+  .book-card {
+    display:flex; align-items:flex-start; gap:16px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:20px;
+    text-decoration:none; color:inherit;
+    transition:transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .book-card:hover {
+    transform:translateY(-3px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.1);
+    border-color:var(--gold);
+  }
+  .book-icon {
+    font-size:36px;
+    flex-shrink:0;
+    width:52px; height:52px;
+    background:var(--gold-lt);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .book-info { flex:1; min-width:0; }
+  .book-badge {
+    display:inline-block;
+    font-size:10px; font-weight:700; letter-spacing:1px;
+    color:var(--red); background:rgba(184,32,46,0.08);
+    padding:2px 8px; border-radius:999px;
+    margin-bottom:6px;
+    font-family:'Noto Sans TC', sans-serif;
+  }
+  .book-title {
+    font-size:15px; font-weight:700; color:var(--ink);
+    margin-bottom:2px; line-height:1.4;
+    font-family:'Noto Sans TC', sans-serif;
+  }
+  .book-author { font-size:12px; color:var(--ink3); margin-bottom:6px; }
+  .book-desc { font-size:13px; color:var(--ink2); line-height:1.6; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <div class="brand-mark">華</div>
+    <div>
+      <div class="brand-name">華鴻文理補習班</div>
+      <div class="brand-sub">Daily · Learning · Care</div>
+    </div>
+  </div>
+  <a class="nav-cta" href="#articles">最新文章</a>
+</header>
+
+<section class="hero">
+  <svg class="hero-doodle" viewBox="0 0 90 60" aria-hidden="true">
+    <path d="M5 28 Q 22 12 42 25 T 78 18" stroke="#b8202e" stroke-width="2" fill="none" stroke-linecap="round" />
+    <path d="M70 10 L 82 18 L 74 28" stroke="#b8202e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">每日教學筆記</div>
+    <h1>會<span class="accent-word">讀書</span>，也要會<span class="accent-mark">做人</span></h1>
+    <p class="hero-sub">先有動機，再談成績——每天記下一件教室裡發生的小事，一個孩子的一句話、一個猶豫、一場討論。寫給願意慢下來陪孩子的你。</p>
+  </div>
+</section>
+
+
+<!-- ── 推薦書區塊 ── -->
+<section class="books-section">
+  <div class="books-inner">
+    <div class="books-label">本週推薦</div>
+    <div class="books-divider"></div>
+    <div class="books-list" id="books-grid"></div>
+  </div>
+</section>
+
+<script>
+// 每週輪播書單（7 週循環，所有書都附博客來商品頁連結，2026-05-17 全部對齊真實版本）
+const bookSchedule = [
+  // 第 1 週
+  [
+    { badge:"低年級最愛｜國小 1–3 年級", title:"怪傑佐羅力1：打敗噴火龍", vol:"系列第 1 集", meta:"原裕 著｜台灣東方出版", desc:"系列起點。狐狸佐羅力為了向天上的媽媽證明自己，踏上「惡作劇之王」的修練之旅，意外收了兩頭豬小弟當跟班。故事節奏快、笑點密集,是最容易讓孩子「一翻開就讀完」的第一冊。" },
+    { badge:"國小高年級–國中", title:"奇蹟男孩 Wonder(暢銷十周年增訂版)", vol:"含朱利安外傳章節", meta:"R.J. Palacio 著｜親子天下", desc:"天生臉部異常的奧吉第一次踏入普通學校。故事以多視角輪流敘述,紐約時報暢銷榜連續 200 週,適合班級共讀與同理心討論。10 週年增訂版收錄霸凌者朱利安的外傳章節,可以一次讀正反兩面。" }
+  ],
+  // 第 2 週
+  [
+    { badge:"中年級推薦｜國小 3–5 年級", title:"神奇柑仔店1:帶來幸福的錢天堂", vol:"系列第 1 集", meta:"廣嶋玲子 著｜親子天下", desc:"神祕的柑仔店「錢天堂」販售可以解決煩惱的零食。每個故事都帶出一個孩子的真實煩惱,讀完自然引發「你會想買哪種糖?」的討論。風靡台日韓三地小學生、系列累銷逾百萬本。" },
+    { badge:"國際獲獎｜國小 4 年級–國中", title:"巧克力冒險工廠", vol:"單冊(Charlie and the Chocolate Factory)", meta:"Roald Dahl 著｜小天下", desc:"入選 BBC「英國人最愛的百大小說」。貧窮男孩查理得到黃金入場券,進入神秘的威利·旺卡巧克力工廠。五個孩子各有致命缺點,一個個被「淘汰」—— 這不只是奇幻故事,更是一面照出孩子性格的鏡子。" }
+  ],
+  // 第 3 週
+  [
+    { badge:"經典必讀｜國小高年級–國中", title:"窗邊的小荳荳(40 週年紀念版)", vol:"自傳式成長小說", meta:"黑柳徹子 著｜親子天下", desc:"被普通小學退學的小荳荳,在巴學園找到了真正懂她的校長小林先生。全球銷售超過千萬冊、譯成 35 種語言。對「不喜歡上學」的孩子特別有共鳴,讀完常說:「我也想讀那種學校。」" },
+    { badge:"高年級最愛｜國小 5 年級–國中", title:"葛瑞的囧日記1:中學慘兮兮", vol:"系列第 1 集(Diary of a Wimpy Kid 親子天下中文版)", meta:"Jeff Kinney 著｜親子天下", desc:"中學生葛瑞用日記加手繪漫畫,記下校園裡的各種糗事與算計。第一集從升上中學第一天開始,充滿真實到讓人噴飯的人際觀察。全球銷量逾 2.5 億冊,公認最容易打開「不愛看書孩子」閱讀習慣的系列。" }
+  ],
+  // 第 4 週
+  [
+    { badge:"低年級最愛｜國小 1–3 年級", title:"怪傑佐羅力2:恐怖的鬼屋", vol:"系列第 2 集", meta:"原裕 著｜台灣東方出版", desc:"佐羅力遇到一群妖怪,發現它們一點也不嚇人,便決定親自示範嚇人技巧,把鎮長借的豪宅改造成恐怖鬼屋。每集獨立成故事,不需從第一集開始讀。" },
+    { badge:"中年級推薦｜國小 3–5 年級", title:"神奇柑仔店2:我不想吃音樂果", vol:"系列第 2 集", meta:"廣嶋玲子 著｜親子天下", desc:"這集介紹一種「讓人變得會唱歌」的音樂果——但吃了之後反而再也聽不見自己真正的聲音。系列中討論「強求一件事」與「失去本來樣貌」最深刻的一集,適合跟孩子一起讀完後聊聊。" }
+  ],
+  // 第 5 週(一次入手套書)
+  [
+    { badge:"系列入門套書｜國小 1–3 年級", title:"怪傑佐羅力 入門套書", vol:"第 1-5 集(5 冊套書)", meta:"原裕 著｜台灣東方出版", desc:"想一次入手經典前 5 冊的家庭選這套最划算。佐羅力一行人從打敗噴火龍到各種奇幻冒險,5 集獨立、笑點密集,是讓孩子「自己想多看一集」的童書系列起點。" },
+    { badge:"系列入門套書｜國小 5 年級–國中", title:"葛瑞的囧日記 1–4 集套書", vol:"系列前 4 集合購", meta:"Jeff Kinney 著｜親子天下", desc:"想一次入手葛瑞系列前 4 集的家庭選這套。從中學慘兮兮、老哥你很煩、老爸別逼我,到狗臉的歲月——每集獨立、銜接流暢,是「讓不愛看書孩子坐下來讀完」最常被推薦的系列。" }
+  ],
+  // 第 6 週(一次入手套書)
+  [
+    { badge:"系列入門套書｜國小 3–5 年級", title:"神奇柑仔店 1～4 集套書", vol:"系列前 4 集合購", meta:"廣嶋玲子 著｜親子天下", desc:"想一次入手「錢天堂」系列前 4 集的家庭選這套。每一集都用一種神奇糖果帶出一個孩子的煩惱與選擇,是討論「真正想要的東西是什麼」的好題材。" },
+    { badge:"作家全集｜國小 3 年級–國中", title:"羅德‧達爾經典套書", vol:"全套 11 冊(含巧克力冒險工廠、女巫、吹夢巨人等)", meta:"Roald Dahl 著｜小天下", desc:"全球銷售逾 3 億冊的童書大師羅德‧達爾經典作品 11 冊整套。從巧克力冒險工廠到女巫、吹夢巨人、查理與大玻璃升降機,每一本都是「孩子讀完會自己挑下一本繼續讀」的入坑書系。" }
+  ],
+  // 第 7 週(柏克萊教養經典｜給家長)
+  [
+    { badge:"柏克萊教養經典｜給家長", title:"教養是一種可怕的發明", vol:"單冊(The Gardener and the Carpenter)", meta:"Alison Gopnik 著(UC Berkeley 發展心理學教授)｜八旗文化", desc:"作者反對「教養 = 把孩子塑造成特定樣子(木匠模式)」的主流想像,主張家長更像「園丁」—— 提供環境、讓孩子按自己的節奏長。讀完家長最常說:「原來我一直在用錯的比喻教孩子。」這本是 Berkeley 學派近年最具代表性的教養經典。" },
+    { badge:"柏克萊教養經典｜給家長", title:"搖籃裡的科學家", vol:"單冊(The Scientist in the Crib)", meta:"Alison Gopnik 等 著(UC Berkeley)｜信誼出版", desc:"三位 UC Berkeley 與華盛頓大學的心理學家,把嬰幼兒當作「最會學習的科學家」來研究。從寶寶為什麼會在你做鬼臉時笑,到三歲怎麼學會講話——每一章都讓家長重新看待自己孩子大腦正在發生的事。" }
+  ],
+];
+
+function getWeekNumber(d) {
+  const date = new Date(d);
+  date.setHours(0,0,0,0);
+  date.setDate(date.getDate() + 4 - (date.getDay() || 7));
+  const yearStart = new Date(date.getFullYear(), 0, 1);
+  return Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+}
+
+const weekNum = getWeekNumber(new Date());
+const weekIdx = (weekNum - 1) % bookSchedule.length;
+const thisWeek = bookSchedule[weekIdx];
+
+const grid = document.getElementById('books-grid');
+thisWeek.forEach((b, i) => {
+  const card = document.createElement('a');
+  card.className = 'book-item';
+  // 整張卡片連到博客來搜尋
+  const q = encodeURIComponent(b.title);
+  card.href = b.url || ('https://search.books.com.tw/search/query/key/' + q);
+  card.target = '_blank';
+  card.rel = 'noopener noreferrer';
+  card.title = '在博客來搜尋《' + b.title + '》';
+  card.innerHTML = `
+    <div class="book-num">0${i+1}</div>
+    <div class="book-info">
+      <div class="book-badge">${b.badge}</div>
+      <div class="book-title">${b.title}　${b.vol}</div>
+      <div class="book-vol">${b.meta}</div>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+</script>
+
+<div class="filter-wrap">
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-axis="all">全部文章</button>
+    <button class="filter-btn" data-axis="parenting">親子教養</button>
+    <button class="filter-btn" data-axis="learning">學習成長</button>
+    <button class="filter-btn" data-axis="reading">閱讀語文</button>
+    <button class="filter-btn" data-axis="exam">升學準備</button>
+    <button class="filter-btn" data-axis="daily">班級日常</button>
+  </div>
+</div>
+
+<main class="articles" id="articles"></main>
+
+<footer class="site-footer">
+  <div class="footer-brand">華鴻文理<span>補習班</span></div>
+  <div class="footer-tagline">會讀書，也要會做人。</div>
+  <div class="footer-divider"></div>
+  <div class="footer-info">
+    每日 10:00 自動更新 · 由華鴻文理老師群輪值寫作<br>
+    本站為教養筆記分享空間，文章中所有學生姓名皆為化名<br>
+    <a href="#articles">↑ 回到頂部</a>
+  </div>
+</footer>
+
+<script>
+const articles = [
+  {
+    file: "wowhome_2026-06-06.html",
+    date: "2026-06-06",
+    axis: "15",
+    axisLabel: "4C 素養力",
+    ta: "C",
+    title: "「他講了好久，我還是聽不懂」——4C 的溝通力，其實不是「比較會講話」",
+    summary: "孩子明明很愛講話，卻常常講了一大串，大人還是聽不懂他在說什麼。從一位媽媽的擔心出發，談 4C 的溝通力——它不是「比較敢講」，而是「能不能讓對方接住」，而這件事，安靜的孩子也能做得很好。"
+  },
+  {
+    file: "wowhome_2026-06-05.html",
+    date: "2026-06-05",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "E",
+    title: "「不用你管啦」——孩子把房門關上的時候，先別急著敲開",
+    summary: "上國二後，阿軒問什麼都「還好」「不用你管」，一回家就關房門。媽媽急著想是不是出事——但青春期關門多半不是出問題，是孩子在練習獨立。這篇講怎麼把「敲門」換成「留一條縫」。"
+  },
+  {
+    file: "wowhome_2026-06-04.html",
+    date: "2026-06-04",
+    axis: "04",
+    axisLabel: "安親日常",
+    ta: "D",
+    title: "嘿，這篇是寫給你的——你下午做的那件小事，老師都看到了",
+    summary: "今天這篇寫給每天背書包走進補習班的你。上禮拜三，你寫完功課沒急著玩，反而回頭幫卡住的同學；你把椅子推回去、把橡皮擦屑撥進垃圾桶——這些沒人規定你做的小事，老師全都看在眼裡。會寫功課很棒，願意多看別人一眼，更棒。"
+  },
+  {
+    file: "wowhome_2026-06-03.html",
+    date: "2026-06-03",
+    axis: "14",
+    axisLabel: "SEL 介紹",
+    ta: "C",
+    title: "SEL 的第二塊：認得了情緒，然後呢？——陪孩子練習「按一下暫停」",
+    summary: "認得自己的感覺是 SEL 的第一塊，但孩子常常知道自己在生氣，下一秒還是動手。SEL 的第二塊「自我管理」不是叫孩子別生氣，而是在『感覺』和『動作』之間撐出一點空隙——這篇講補習班怎麼一次一次陪他把那條縫練出來。"
+  },
+  {
+    file: "wowhome_2026-06-01.html",
+    date: "2026-06-01",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "A",
+    title: "「他一輸就翻桌」——孩子輸不起，先別急著教他「要有風度」",
+    summary: "孩子玩遊戲一輸就翻桌、賴皮說不算，先別急著教他「要有風度」。這個年紀的孩子分不清「輸一局」和「我很爛」，先接住情緒，再陪他練習坐回去、再來一次。"
+  },
+  {
+    file: "wowhome_2026-05-31.html",
+    date: "2026-05-31",
+    axis: "08",
+    axisLabel: "家長焦慮 FAQ",
+    ta: "B",
+    title: "「他半夜又爬上我們床」——八歲的孩子，還是要睡爸媽中間",
+    summary: "在班媽媽悄悄問：「小睿八歲了，連續一週半夜跑來我們床上睡，怎麼勸都不回。」這個年紀的孩子半夜跑來爸媽床上，常常不是退化，是他白天有件事還沒消化完——這篇談怎麼陪、怎麼問、什麼時候要進一步處理。"
+  },
+  {
+    file: "wowhome_2026-05-30.html",
+    date: "2026-05-30",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "C",
+    title: "「不公平！」——孩子這樣喊的時候，先別急著解釋規則",
+    summary: "孩子在飯桌上突然喊「不公平」，大人本能想解釋——為什麼弟弟比較小、為什麼今天多給他一塊。可是越解釋，孩子越生氣。這篇談孩子說「不公平」時，他真正在意的，常常不是規則本身。"
+  },
+  {
+    file: "wowhome_2026-05-29.html",
+    date: "2026-05-29",
+    axis: "01",
+    axisLabel: "覺知教育",
+    ta: "E",
+    title: "「老師，我不想念了」——段考前一週，他這樣說的時候，先別急著鼓勵",
+    summary: "段考前一週，國二的阿宏坐在補習班角落，講義翻開卻半小時沒動。他抬頭跟老師說：「我不想念了。」這篇談我們那天為什麼沒急著打氣，反而先問了一個跟讀書無關的問題——後來才明白，那才是他真正需要的入口。"
+  },
+  {
+    file: "wowhome_2026-05-27.html",
+    date: "2026-05-27",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "C",
+    title: "「我又沒有錯！」——孩子不肯道歉，先別逼他開口",
+    summary: "孩子撞翻同學的水彩、嘴上卻硬說「我又沒有錯」。這不是任性，是還在處理那一秒的羞愧。這篇談我們在補習班遇到的小衝突，以及為什麼放下「快道歉」三個字，孩子反而真的開口了。"
+  },
+  {
+    file: "wowhome_2026-05-26.html",
+    date: "2026-05-26",
+    axis: "07",
+    axisLabel: "補習班幕後",
+    ta: "B",
+    title: "家長來接的時候，孩子站在門口聽到的那句話",
+    summary: "傍晚六點半，家長走進補習班來接孩子，第一句話常是「功課寫完了沒？」。這篇是接送那十分鐘的小觀察——孩子會用爸媽進門的第一句話，判斷今天的哪一塊是被等待的。"
+  },
+  {
+    file: "wowhome_2026-05-25.html",
+    date: "2026-05-25",
+    axis: "15",
+    axisLabel: "4C 素養力",
+    ta: "A",
+    title: "「補習班會不會把孩子教笨？」——4C 的第二個 C，補習班最該回答的問題",
+    summary: "找補習班的家長常擔心：「補久了，孩子會不會變成只會考試、沒自己想法？」從一位小四爸爸的問題出發，談 4C 的第二個 C——Creativity 創造力到底是什麼，以及補習班該怎麼陪孩子練，才不會把腦袋練死。"
+  },
+  {
+    file: "wowhome_2026-05-24.html",
+    date: "2026-05-24",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "B",
+    title: "孩子做對事的時候，先別急著說「你好棒」",
+    summary: "「你好棒」說起來很快，但孩子不一定知道自己哪裡好。從補習班裡一個主動訂正錯題的孩子說起，談一種更有用的稱讚——把你看到的那個動作具體說出來，孩子才知道下次要重複的是什麼。"
+  },
+  {
+    file: "wowhome_2026-05-23.html",
+    date: "2026-05-23",
+    axis: "14",
+    axisLabel: "SEL 介紹",
+    ta: "C",
+    title: "孩子只會說「還好」——SEL 的第一塊，先幫他認得自己的感覺",
+    summary: "上一篇談過 SEL 是什麼，這次只談第一塊——自我覺察。一個總是回答「還好」「不知道」的孩子，往往不是敷衍，而是還沒學會替自己的感覺取名字。而這，是後面所有 SEL 能力的地基。"
+  },
+  {
+    file: "wowhome_2026-05-22.html",
+    date: "2026-05-22",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "E",
+    title: "「修復」可以很小，但要由大人先開始——爭吵之後，比道歉更重要的一件事",
+    summary: "對孩子發完脾氣，道歉就夠了嗎？對國中的孩子來說，他等的不是完美的道歉稿，而是「我們之間沒有斷」的訊號。關係難免有裂痕，重點是吵完之後，大人願不願意先把手伸回來。"
+  },
+  {
+    file: "wowhome_2026-05-20.html",
+    date: "2026-05-20",
+    axis: "08",
+    axisLabel: "家長焦慮FAQ",
+    ta: "C",
+    title: "「他先打我的！」——孩子吵架，先別急著當法官",
+    summary: "孩子一吵架，家長最常做的就是衝過去問「誰先開始的」，然後各打五十大板。但這樣孩子學到的不是怎麼和好，而是怎麼把爸媽拉到自己這邊。與其當法官，不如當翻譯——先把兩個孩子的感受說出來。"
+  },
+  {
+    file: "wowhome_2026-05-19.html",
+    date: "2026-05-19",
+    axis: "01",
+    axisLabel: "覺知教育",
+    ta: "B",
+    title: "「他不是不會，是還在想」——每個孩子都有自己的學習節奏",
+    summary: "週二晚上的安親班，小宇對著一題數學卡了好一陣子。我原本要過去講解，但停下來看了一眼——他的手指在桌上比劃，嘴巴小聲念。他不是發呆，他正在試。多等三分鐘，他自己就過關了。"
+  },
+  {
+    file: "wowhome_2026-05-18.html",
+    date: "2026-05-18",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "A",
+    title: "「動作快又要遲到了!」——先別急著罵，試著給孩子一分鐘",
+    summary: "週一早上鬧鐘響三次，孩子翻過去用棉被蒙住頭。他不是叛逆，是還卡在「週末和上學中間」那段切換不過來的縫裡。一分鐘的緩衝，比催罵十次有用。"
+  },
+  {
+    file: "wowhome_2026-05-17.html",
+    date: "2026-05-17",
+    axis: "15",
+    axisLabel: "國際 4C 素養力",
+    ta: "C",
+    title: "什麼是國際 4C 素養力？——批判思考、創造力、溝通、協作，孩子這四件事比分數更影響未來",
+    summary: "課綱講「核心素養」、教育部講「21 世紀技能」、國際組織講「4C」——其實都是同一件事：Critical Thinking、Creativity、Communication、Collaboration。微軟、Intel、UNESCO、OECD 都認可的 21 世紀核心能力。"
+  },
+  {
+    file: "wowhome_2026-05-15.html",
+    date: "2026-05-15",
+    axis: "14",
+    axisLabel: "SEL 介紹",
+    ta: "C",
+    title: "SEL 是什麼？——為什麼華鴻的老師會花時間問「今天心情怎麼樣」",
+    summary: "SEL（社會情緒學習）這幾年在學校越來越常聽到，但對家長來說可能還是很抽象。用補習班裡會發生的小事告訴你 SEL 在日常的樣子，以及為什麼我們認為它和成績一樣重要——甚至更重要。"
+  },
+  {
+    file: "wowhome_2026-05-14.html",
+    date: "2026-05-14",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "C",
+    title: "「又不是我的錯」——孩子說這句話時，他到底在怕什麼",
+    summary: "孩子犯了錯先甩一句「又不是我！」、「他先的！」——這通常不是推卸，是反射動作。從補習班的一個小衝突講起，看這句話下面藏著什麼，以及家長可以怎麼回應，才不會把孩子推得更遠。"
+  },
+  {
+    file: "wowhome_2026-05-13.html",
+    date: "2026-05-13",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "C",
+    title: "孩子寫功課寫到 11 點——先把燈關小，再說話",
+    summary: "家長問：「他到底是真的不會，還是在拖？」這個問題在十一點不會有答案。那時候孩子已經累了、累到分不清自己在想什麼。這篇不講分析，講「先收兵」這件事——以及為什麼這比任何學習策略都重要。"
+  },
+  {
+    file: "wowhome_2026-05-12.html",
+    date: "2026-05-12",
+    axis: "07",
+    axisLabel: "補習班幕後",
+    ta: "B",
+    title: "週二下午四點半，老師們在辦公室裡開的那場小會",
+    summary: "每週二孩子放學進補習班之前的十五分鐘，我們的老師會聚在辦公室開一場小會。會議不長、沒有議程，白板上只寫了幾個孩子的名字。這篇分享，是想讓家長看見：那些你以為老師沒注意到的事，我們其實一直記著。"
+  },
+  {
+    file: "wowhome_2026-05-11.html",
+    date: "2026-05-11",
+    axis: "03",
+    axisLabel: "閱讀推薦",
+    ta: "C",
+    title: "《奇蹟男孩》——當孩子問「為什麼大家不喜歡跟他玩」，這本書比一百句道理有用",
+    summary: "R.J. Palacio 的《奇蹟男孩》(Wonder) 不是教孩子「要善良」，而是讓他親眼看見善良會經過多少猶豫。這本適合國小高年級到國中、家長也該自己讀一次的書，我們在課堂如何用、為什麼建議家長先讀一次，這篇整理。"
+  },
+  {
+    file: "wowhome_2026-05-10.html",
+    date: "2026-05-10",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "B",
+    title: "孩子發脾氣的時候，不講道理才是真的有用",
+    summary: "阿宏在補習班把課本摔到桌上，說不寫了。老師沒有立刻糾正，而是蹲下來說了一句話——三分鐘後，阿宏自己拿起鉛筆繼續寫。孩子情緒爆發時，先「看見他」比先「說道理」，往往更有用，也更快。"
+  },
+  {
+    file: "wowhome_2026-05-09.html",
+    date: "2026-05-09",
+    axis: "03",
+    axisLabel: "閱讀推薦",
+    ta: "C",
+    title: "孩子說「我不喜歡看書」——也許只是還沒遇到對的那一本",
+    summary: "很多孩子說不愛看書，但他們抗拒的是「被規定的閱讀」，不是閱讀本身。分享一本我們在安親班用了很久的繪本，以及怎麼陪孩子把閱讀變成他自己的事，不需要寫心得，也不需要說出主旨。"
+  },
+  {
+    file: "wowhome_2026-05-08.html",
+    date: "2026-05-08",
+    axis: "12",
+    axisLabel: "正向教養",
+    ta: "B",
+    title: "他不是在拖——孩子發呆時，先別急著推他",
+    summary: "孩子盯著作業本發呆四十分鐘，家長看了會急。但這四十分鐘裡，他其實也很累。先把「他在拖」這句話收回去，蹲下來陪他一段，常常比任何方法都有效。"
+  },
+  {
+    file: "wowhome_2026-05-07.html",
+    date: "2026-05-07",
+    axis: "01",
+    axisLabel: "覺知教育",
+    ta: "C",
+    title: "孩子為什麼「明明會，考試卻錯」——從覺察開始找答案",
+    summary: "平常練習都對，一考試就錯——這不只是粗心問題。從教學現場觀察，背後常常是孩子還沒學會看見自己的狀態。覺察能力，是可以練習的。"
+  }
+];
+
+const filterMap = {
+  parenting: ["01","12","13","14","15"],  // 14 SEL 介紹、15 4C 素養力歸入親子教養（品牌深耕）
+  learning:  ["02","10","05"],
+  reading:   ["03","09"],
+  exam:      ["06","08","11"],
+  daily:     ["04","07"],
+};
+
+const taLabels = {
+  A: "找補習班的家長",
+  B: "在班家長",
+  C: "教養家長",
+  D: "國小學童",
+  E: "國中升學家長"
+};
+
+// ── 卡片縮圖：按 axis 對應 Unsplash 教育主題照片池（5 張/池，依日期循環）──
+// 照片池沿用覺知網站 v3-edu 驗證過的 35 張 Unsplash photo（明亮、暖色、有人物，全部 200 OK verified）
+// 不下載到本地，瀏覽器直接拉取（auto-format + w=800 自動瘦身，縮圖約 50-120KB）
+const AXIS_PHOTO_POOLS = {
+  "01": ["photo-1584697964038-28e16a2b6a3a","photo-1728455635901-bb16530faf40","photo-1584697964328-b1e7f63dca95","photo-1606295834251-36d654991797","photo-1596066190600-3af9aadaaea1"], // 覺知教育 → 青少年思考/書桌
+  "02": ["photo-1560785496-3c9d27877182","photo-1514369118554-e20d93546b30","photo-1610484826625-ac2be7f1c8c1","photo-1565843248736-8c41e6db117b","photo-1585432959445-662c9bbcd91d"], // 非認知能力 → 學齡兒童寫作業
+  "03": ["photo-1544463914-56f84a6cc6b1","photo-1725582205921-7d681ebca2a7","photo-1597098868667-113f3a729471","photo-1707219373528-35b242428adc","photo-1543556153-663aaf154a81"], // 閱讀推薦 → 閱讀/書桌/咖啡
+  "06": ["photo-1584697964038-28e16a2b6a3a","photo-1606295834251-36d654991797","photo-1728455635901-bb16530faf40","photo-1596066190600-3af9aadaaea1","photo-1584697964328-b1e7f63dca95"], // 升學軟實力 → 青少年/書桌
+  "07": ["photo-1584697964038-28e16a2b6a3a","photo-1728455635901-bb16530faf40","photo-1606295834251-36d654991797","photo-1596066190600-3af9aadaaea1","photo-1584697964328-b1e7f63dca95"], // 補習班幕後 → 青少年/教室
+  "08": ["photo-1581952976147-5a2d15560349","photo-1576089073624-b5751a8f4de9","photo-1577896850561-dc005e5b5689","photo-1654613698275-b0930ef9570f","photo-1740679954195-a14d66b189ab"], // 家長焦慮 FAQ → 親子溝通
+  "10": ["photo-1560785496-3c9d27877182","photo-1514369118554-e20d93546b30","photo-1610484826625-ac2be7f1c8c1","photo-1565843248736-8c41e6db117b","photo-1585432959445-662c9bbcd91d"], // 學習策略 → 學齡兒童寫作業
+  "12": ["photo-1531984929664-2fb2be468d3e","photo-1560328055-e938bb2ed50a","photo-1624003652795-a9f73df756fa","photo-1537655780520-1e392ead81f2","photo-1564156280315-1d42b4651629"], // 正向教養 → 親子陪伴/共讀
+  "14": ["photo-1581952976147-5a2d15560349","photo-1577896850561-dc005e5b5689","photo-1576089073624-b5751a8f4de9","photo-1654613698275-b0930ef9570f","photo-1531984929664-2fb2be468d3e"], // SEL 介紹 → 親子情感／溝通 + 幼兒安全感
+  "15": ["photo-1624003652795-a9f73df756fa","photo-1537655780520-1e392ead81f2","photo-1564156280315-1d42b4651629","photo-1560328055-e938bb2ed50a","photo-1740679954195-a14d66b189ab"]  // 4C 素養力 → 親子陪伴／自我覺察
+};
+const FALLBACK_POOL = AXIS_PHOTO_POOLS["01"];
+
+// 全域去重照片分配 —— 整個首頁 10+ 篇不能有重複
+// 演算法：照「日期最新先」排序逐篇分配。同 axis 池子用完 → 從所有池子借一張未用過的
+const _allPoolSlugs = Array.from(new Set(Object.values(AXIS_PHOTO_POOLS).flat()));
+function buildThumbAssignments(articles) {
+  const used = new Set();
+  const assignments = new Map();
+  const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+  for (const a of sorted) {
+    const pool = AXIS_PHOTO_POOLS[a.axis] || FALLBACK_POOL;
+    // 1. 先從 axis pool 找未用過的（保持主題貼合）
+    let slug = pool.find(s => !used.has(s));
+    // 2. axis pool 全部撞了 → 從 35 張全集找未用過的
+    if (!slug) slug = _allPoolSlugs.find(s => !used.has(s));
+    // 3. 真的全用光（>35 篇）→ 重置 used，從頭再來
+    if (!slug) { used.clear(); slug = pool[0]; }
+    used.add(slug);
+    assignments.set(a.file, slug);
+  }
+  return assignments;
+}
+const THUMB_ASSIGNMENTS = buildThumbAssignments(articles);
+
+function thumbForArticle(article) {
+  const slug = THUMB_ASSIGNMENTS.get(article.file)
+            || (AXIS_PHOTO_POOLS[article.axis] || FALLBACK_POOL)[0];
+  return `https://images.unsplash.com/${slug}?w=800&auto=format&fit=crop&q=80`;
+}
+
+function render(filter = "all") {
+  const grid = document.getElementById("articles");
+  grid.innerHTML = "";
+  const axes = filterMap[filter];
+  const list = filter === "all" ? articles : articles.filter(a => axes.includes(a.axis));
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="empty">這個分類還沒有文章，請選其他分類或回到全部。</div>';
+    return;
+  }
+  list.sort((a, b) => b.date.localeCompare(a.date));
+  list.forEach((a, i) => {
+    const card = document.createElement("a");
+    card.className = "card";
+    card.href = a.file;
+    card.dataset.axis = a.axis;
+    card.style.animationDelay = (0.5 + i * 0.06) + "s";
+    const thumbUrl = thumbForArticle(a);
+    // 首 4 張 eager（首屏立刻顯示），其餘 lazy 省頻寬
+    const loadAttr = i < 4 ? "eager" : "lazy";
+    card.innerHTML = `
+      <img class="card-thumb" src="${thumbUrl}" alt="${a.title}" loading="${loadAttr}" decoding="async" onerror="this.style.display='none'">
+      <div class="card-stripe"></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="topic-tag">${a.axisLabel}</span>
+          <span class="card-date">${a.date}</span>
+        </div>
+        <h3>${a.title}</h3>
+        <div class="card-summary">${a.summary}</div>
+        <div class="card-footer">
+          <span class="card-ta">寫給 ${taLabels[a.ta] || ""}</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+render("all");
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render(btn.dataset.axis);
+  });
+});
+</script>
+
+</body>
+</html>

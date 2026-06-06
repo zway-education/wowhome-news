@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孩子只會說「還好」——SEL 的第一塊，先幫他認得自己的感覺｜華鴻文理補習班</title>
+<meta name="description" content="一個總是回答「還好」「不知道」的孩子，往往不是敷衍，是還沒學會替自己的感覺取名字。這篇從一個說不出心情的孩子說起，談 SEL 的第一塊能力——自我覺察，以及它為什麼是後面所有能力的地基。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">SEL 介紹</span>
+    <span>2026-05-23</span>
+    <span>·</span>
+    <span>寫給對教養有興趣的家長</span>
+  </div>
+  <h1 class="title">孩子只會說「還好」——SEL 的第一塊，先幫他認得自己的感覺</h1>
+
+  <div class="lead">
+    上一篇我們聊過 SEL 是什麼，這次只談它的第一塊——自我覺察。一個總是回答「還好」「不知道」的孩子，往往不是敷衍，而是還沒學會替心裡那團東西取名字。而這件事，是後面所有 SEL 能力的地基。
+  </div>
+
+  <p>下午四點半，阿哲推開補習班的門。老師照例問了一句：「今天還好嗎？」阿哲頭也沒抬：「還好。」</p>
+
+  <p>這句「還好」，我們聽了快一個學期。心情好，他說還好；剛跟同學鬧不愉快，他說還好；月考考砸的那天，他也說還好。不是他在敷衍——是他真的不太知道，自己現在是什麼狀態。</p>
+
+  <p>上週二，阿哲寫數學寫到一半，因為旁邊同學跟他借橡皮擦這種小事，突然把鉛筆一摔。老師走過去，沒問「你幹嘛摔筆」，而是先問了一句：「你現在，是不是有點不舒服？」阿哲愣了一下，說：「我也不知道，就……很煩。」</p>
+
+  <p>後來才知道，那天早上學校選班級幹部，阿哲很想當，但沒選上。那股悶從早上一直帶到下午，他自己沒發現。一直到鉛筆摔在桌上，連他都被自己嚇了一跳。</p>
+
+  <p>阿哲不是脾氣差。他遇到的，是很多孩子都會遇到的狀況——心裡有一團東西，但他叫不出它的名字。<strong>叫不出名字的情緒不會消失</strong>，它會用「摔筆」「頂嘴」「發呆」這些方式，自己跑出來。SEL 想處理的第一件事，就是這個。</p>
+
+  <h2>SEL 的第一塊，叫「自我覺察」</h2>
+
+  <p>上一篇文章我們提過，SEL（社會情緒學習）有五塊能力。今天不貪心，只談第一塊，也是其他四塊的地基——自我覺察。</p>
+
+  <p>自我覺察說穿了很樸素：就是一個人能不能說出「我現在怎麼了」。是難過，還是只是累了？是生氣，還是其實是失望？是緊張，還是只是肚子餓？</p>
+
+  <p>為什麼說它是地基？因為 SEL 後面那幾塊——管理自己的情緒、跟人好好相處、為自己的選擇負責——全都得站在它上面。<strong>你沒辦法管理一個你叫不出名字的情緒</strong>，就像你沒辦法整理一個你看不見的房間。孩子要先「認得」那團東西，才有辦法「處理」它。順序，不能顛倒。</p>
+
+  <h2>我們怎麼幫孩子「認得感覺」</h2>
+
+  <p>在補習班，我們沒有開一堂課教這個。我們做的，其實是三件很小的事。</p>
+
+  <p>第一，幫情緒取一個名字。當孩子說「就很煩」，我們會陪他多走一步：「煩，是因為有人吵到你，還是因為有件事一直放在心上？」把模糊的「煩」，拆成他聽得懂的詞。</p>
+
+  <p>第二，不替他下結論。我們不會說「你就是太愛生氣」。標籤一旦貼上去，孩子學到的只會是「我是個壞脾氣的人」，而不是「我剛才在失望」。</p>
+
+  <p>第三，把「不知道」當成起點，不是句點。孩子說「我不知道」，很多時候是真的不知道，不是不配合。我們會說：「沒關係，那我們一起慢慢想。」</p>
+
+  <p>阿哲的轉變花了好幾個禮拜。前陣子有一天，他寫作業寫到一半停下來，自己跟老師說：「老師，我今天有點低落，因為我跟好朋友冷戰了。」——他講得不算漂亮，但他「認得」了。那一刻，他已經跨過了 SEL 的第一道門。</p>
+
+  <blockquote>
+    一個能說出「我現在有點難過」的孩子，比一個只會說「還好」的孩子，更有能力照顧好自己。因為他看得見自己。
+  </blockquote>
+
+  <h2>家長在家，可以做的一件事</h2>
+
+  <p>不需要教材，也不需要報名課程。你能做的，是當孩子的「情緒翻譯機」。</p>
+
+  <p>當孩子悶悶的，先別急著問「你到底怎樣」。試著替他命名：「你看起來不太像生氣，比較像有點失望，是嗎？」就算猜錯也沒關係——孩子會回你「不是啦，我是……」，光是這個糾正，他就在練習認得自己。</p>
+
+  <p>一開始他可能只會回「不知道」。多示範幾個禮拜，他會慢慢接得上來；再過一陣子，他會開始主動告訴你他怎麼了。到那時候你會發現，很多原本要用吼的、用猜的事，他自己講出來，就先解決了一半。</p>
+
+  <p>會讀書，也要會做人。我們始終相信，先看懂自己，才看得懂題目；先認得心裡那團東西，才談得上管理它。SEL 的五塊能力，華鴻會一塊一塊慢慢跟你聊——但第一塊永遠是這個：讓孩子先，認得自己。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    SEL · 社會情緒學習 · 自我覺察 · 情緒命名 · 認得感覺 · 品牌深耕
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-23_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

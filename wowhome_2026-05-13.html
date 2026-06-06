@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孩子寫功課寫到 11 點——先把燈關小，再說話｜華鴻文理補習班</title>
+<meta name="description" content="家長問：『他到底是真的不會，還是在拖？』這個問題在當下不會有答案。十一點的孩子已經累了，累到分不清自己在想什麼。這篇不講分析，講「先收兵」這件事——以及為什麼這比任何學習策略都重要。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+
+
+/* ===== HAND-DRAWN V5 INJECTED ===== */
+  /* ── Design Tokens（hand-drawn overlay）─────────────── */
+  :root {
+    --hd-paper: #fbf6ee;
+    --hd-paper-grid: rgba(45, 42, 38, 0.06);
+    --hd-ink: #2d2a26;
+    --hd-pencil: #5a564d;
+    --hd-red: #e84a3a;
+    --hd-yellow: #f7c84b;
+    --hd-blue: #4a86e0;
+    --hd-green: #4fb585;
+    --hd-pink: #e8779e;
+    --hd-highlighter: rgba(247, 200, 75, 0.5);
+    --hd-radius-rough: 24px 18px 22px 16px / 16px 22px 18px 24px;
+    --hd-radius-rough-sm: 14px 10px 12px 8px / 8px 12px 10px 14px;
+    --hd-font-body: 'PingFang TC', 'Noto Sans TC', system-ui, sans-serif;
+  }
+
+  /* ── body：紙質米色 + 細格紋 + 咖啡漬 ── */
+  body {
+    background-color: var(--hd-paper) !important;
+    background-image:
+      linear-gradient(var(--hd-paper-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hd-paper-grid) 1px, transparent 1px) !important;
+    background-size: 22px 22px !important;
+    background-attachment: fixed !important;
+    font-family: var(--hd-font-body) !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.78 !important;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    width: 320px; height: 240px;
+    top: 22%; right: 3%;
+    background: radial-gradient(ellipse, rgba(120, 80, 50, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    width: 200px; height: 160px;
+    bottom: 8%; left: -40px;
+    background: radial-gradient(ellipse, rgba(120, 80, 50, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── topbar：紙質 + 黃下緣硬陰影 ── */
+  .topbar {
+    background: var(--hd-paper) !important;
+    border-bottom: 2.5px solid var(--hd-ink) !important;
+    box-shadow: 0 5px 0 -2px var(--hd-yellow), 0 6px 12px rgba(45, 42, 38, 0.08) !important;
+  }
+  .brand-name {
+    color: var(--hd-ink) !important;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 1.5px !important;
+  }
+  .brand-mark {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    box-shadow: 2px 2px 0 var(--hd-ink) !important;
+    border-radius: 8px 6px 9px 5px / 5px 9px 6px 8px !important;
+    transform: rotate(-4deg);
+  }
+  .back-btn {
+    color: var(--hd-ink) !important;
+    border: 2px solid var(--hd-ink) !important;
+    background: transparent !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    font-family: var(--hd-font-body) !important;
+    box-shadow: 2px 2px 0 var(--hd-ink) !important;
+    transform: rotate(-1deg);
+    transition: transform .12s, box-shadow .12s !important;
+  }
+  .back-btn:hover {
+    background: var(--hd-yellow) !important;
+    transform: rotate(-2deg) translate(-1px, -1px) !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+  }
+
+  /* ── article ── */
+  article { position: relative; z-index: 1; }
+
+  /* ── 軸別便利貼 ── */
+  .axis-tag {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    padding: 7px 16px !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+    transform: rotate(-1.8deg);
+    display: inline-block !important;
+    margin-right: 10px;
+    font-family: var(--hd-font-body) !important;
+  }
+  .meta-row { gap: 14px !important; margin-bottom: 28px !important; }
+  .meta-row > span:not(.axis-tag) {
+    color: var(--hd-pencil) !important;
+    font-size: 13px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+
+  /* ── h1.title：粗黑體 + 紅波浪線 ── */
+  h1.title {
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.45 !important;
+    margin-bottom: 18px !important;
+    position: relative;
+    padding-bottom: 14px;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 0.5px !important;
+  }
+  h1.title::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: min(400px, 100%);
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 15 0 30 4 T 60 4 T 90 4 T 120 4' stroke='%23e84a3a' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 120px 8px;
+    opacity: 0.7;
+  }
+
+  /* ── lead：螢光筆漸層 + 不規則圓角 + 旋轉 + 手繪箭頭 ── */
+  .lead {
+    background: linear-gradient(180deg, rgba(247,200,75,0.06) 0%, rgba(247,200,75,0.42) 50%, rgba(247,200,75,0.06) 100%) !important;
+    border-left: 4px solid var(--hd-yellow) !important;
+    border-radius: var(--hd-radius-rough) !important;
+    padding: 22px 26px !important;
+    margin: 36px 0 56px !important;
+    color: var(--hd-ink) !important;
+    line-height: 1.9 !important;
+    transform: rotate(-0.3deg);
+    position: relative;
+    font-size: 16.5px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+  .lead::after {
+    content: '';
+    position: absolute;
+    right: 16px; bottom: -36px;
+    width: 60px; height: 48px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 48'%3E%3Cpath d='M8 6 Q 22 22 30 32 Q 38 40 48 32' stroke='%23e84a3a' stroke-width='2.3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M42 30 L 50 34 L 46 42' stroke='%23e84a3a' stroke-width='2.3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transform: rotate(6deg);
+    pointer-events: none;
+  }
+
+  /* ── article p：body 字體 + 深墨 + 紅蠟筆 strong ── */
+  article p {
+    font-family: var(--hd-font-body) !important;
+    color: var(--hd-ink) !important;
+    font-size: 16.5px !important;
+    line-height: 1.88 !important;
+    margin: 22px 0 !important;
+  }
+  article p strong {
+    color: var(--hd-ink) !important;
+    background: linear-gradient(180deg, transparent 56%, var(--hd-highlighter) 56%);
+    padding: 0 3px;
+    font-weight: 700 !important;
+  }
+
+  /* ── h2：✦ 星星 + 黃波浪線 ── */
+  article h2 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: var(--hd-ink) !important;
+    margin: 48px 0 18px !important;
+    padding-bottom: 8px !important;
+    border-bottom: none !important;
+    position: relative;
+    display: inline-block;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 0.3px !important;
+  }
+  article h2::before {
+    content: '✦' !important;
+    display: inline-block !important;
+    width: auto !important; height: auto !important;
+    background: none !important;
+    color: var(--hd-red) !important;
+    margin-right: 10px !important;
+    font-size: 18px !important;
+    vertical-align: middle !important;
+    border-radius: 0 !important;
+    transform: rotate(-12deg);
+  }
+  article h2::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 6' preserveAspectRatio='none'%3E%3Cpath d='M0 3 Q 15 0 30 3 T 60 3 T 90 3 T 120 3' stroke='%23f7c84b' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 120px 6px;
+    opacity: 0.85;
+  }
+
+  /* ── blockquote：黃便利貼 + 大紅引號 ── */
+  blockquote {
+    background: var(--hd-yellow) !important;
+    border: none !important;
+    border-radius: var(--hd-radius-rough) !important;
+    padding: 26px 28px 24px 56px !important;
+    color: var(--hd-ink) !important;
+    font-style: normal !important;
+    font-family: var(--hd-font-body) !important;
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+    box-shadow: 4px 5px 0 rgba(45, 42, 38, 0.18), 0 1px 1px rgba(45, 42, 38, 0.08) !important;
+    transform: rotate(-0.8deg);
+    margin: 36px 0 !important;
+    position: relative;
+  }
+  blockquote::before {
+    content: '\201C' !important;
+    font-size: 64px !important;
+    color: var(--hd-red) !important;
+    position: absolute !important;
+    left: 14px !important; top: 10px !important;
+    line-height: 1 !important;
+    vertical-align: top !important;
+    margin-right: 0 !important;
+    font-family: Georgia, serif !important;
+    transform: rotate(-6deg);
+  }
+
+  /* ── endnote：粉便利貼 ── */
+  .endnote {
+    background: var(--hd-pink) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: var(--hd-radius-rough) !important;
+    border-top: none !important;
+    box-shadow: 4px 5px 0 rgba(45, 42, 38, 0.18) !important;
+    transform: rotate(0.6deg);
+    padding: 24px 28px !important;
+    font-family: var(--hd-font-body) !important;
+    text-align: left !important;
+    margin-top: 56px !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+  .endnote strong {
+    color: #fff !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 10px !important;
+    opacity: 0.85;
+    display: block !important;
+    text-transform: uppercase !important;
+  }
+
+  /* ── footer-card：紅票根 + 黑硬陰影 ── */
+  .footer-card {
+    background: var(--hd-red) !important;
+    color: #fff !important;
+    border-radius: var(--hd-radius-rough) !important;
+    border-top: none !important;
+    box-shadow: 5px 6px 0 var(--hd-ink) !important;
+    transform: rotate(-0.4deg);
+    margin: 40px auto 72px !important;
+    max-width: 680px !important;
+    padding: 26px 28px !important;
+    font-family: var(--hd-font-body) !important;
+  }
+  .footer-card h3 {
+    color: var(--hd-yellow) !important;
+    font-family: var(--hd-font-body) !important;
+    letter-spacing: 2px !important;
+  }
+  .footer-card p {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* ── share-fab：手繪 CTA（紅 + 黑硬陰影 + 不規則圓角微旋轉） ── */
+  .share-fab {
+    background: var(--hd-red) !important;
+    border: 2px solid var(--hd-ink) !important;
+    border-radius: 50% !important;
+    box-shadow: 3px 3px 0 var(--hd-ink) !important;
+    transform: rotate(-3deg);
+  }
+  .share-fab:hover {
+    background: var(--hd-red) !important;
+    transform: scale(1.06) rotate(-5deg) !important;
+    box-shadow: 5px 5px 0 var(--hd-ink) !important;
+  }
+  .share-fab::after {
+    background: var(--hd-ink) !important;
+    border-radius: var(--hd-radius-rough-sm) !important;
+    font-family: var(--hd-font-body) !important;
+  }
+/* ===== /HAND-DRAWN V5 ===== */
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">正向教養</span>
+    <span>2026-05-13</span>
+    <span>·</span>
+    <span>寫給對教養有興趣的家長</span>
+  </div>
+  <h1 class="title">孩子寫功課寫到 11 點——先把燈關小，再說話</h1>
+
+  <div class="lead">
+    家長問：「他到底是真的不會，還是在拖？」這個問題在十一點不會有答案。那時候孩子已經累了，累到分不清自己在想什麼。這篇不講分析，講「先收兵」這件事——以及為什麼這比任何學習策略都重要。
+  </div>
+
+  <p>最近接到一位四年級家長的 LINE：「老師，他每天功課都要寫到十一點。看他在那邊磨，我又火又心疼。他到底是不是有什麼問題？」</p>
+
+  <p>我那天回了一句話：「先別問為什麼，先讓他去睡。」</p>
+
+  <p>媽媽愣了很久。她說：「可是功課還沒寫完。」</p>
+
+  <p>我說：「沒寫完明天再寫。今天讓他睡。」</p>
+
+  <h2>十一點的孩子，沒有答案</h2>
+
+  <p>家長對著一個寫到十一點的孩子，腦袋裡通常會有一連串問題：是不會嗎？是在拖嗎？是注意力不集中嗎？是不是要不要看一下醫生？這些問題都合理——但放在十一點，全都得不到答案。</p>
+
+  <p>為什麼？因為<strong>累的人沒有判斷力，包括孩子，也包括你</strong>。十一點的他講不清自己卡在哪、十一點的你也分不出他是真的不會還是太累。兩個人在那邊耗，問再多次都是錯的問題、錯的時機。</p>
+
+  <blockquote>
+    一個九歲、十歲的孩子，晚上九點以後其實已經不太能學習新東西了。十一點還在寫的，多數時候不是「補進度」，是「在你面前演完一個責任」。
+  </blockquote>
+
+  <p>我們在班上看過太多這樣的孩子。隔天早上問他昨天那題會了沒，他眨眨眼說「不知道」。不是裝傻——是真的不記得。十一點寫的東西，第二天起來幾乎留不住。</p>
+
+  <h2>家長可以做的一件事：宣布今晚停在這裡</h2>
+
+  <p>聽起來像放棄，其實是<strong>收兵</strong>。收兵不是輸，是讓明天還能再戰。</p>
+
+  <p>具體做法很簡單。九點半（或你家原本的睡覺時間），無論寫到哪，走過去把燈關小一階，輕輕說：</p>
+
+  <p><strong>「今天就到這裡。剩下的明天早上再寫，或請老師幫忙。媽媽會幫你跟老師說一聲。」</strong></p>
+
+  <p>不解釋、不討價還價、不講「都是因為你⋯⋯」。就只是宣布今晚結束。</p>
+
+  <p>多數孩子那一瞬間會鬆掉。有些會掉眼淚——不是難過，是<strong>「終於有人說可以停了」</strong>的眼淚。然後他會去刷牙、去睡覺。睡得比平常還沉。</p>
+
+  <h2>隔天早上補回來的能量</h2>
+
+  <p>很多家長擔心：「那作業怎麼辦？老師會不會生氣？」</p>
+
+  <p>第一，幾乎沒有老師會在你解釋過「孩子昨晚十一點還在寫，我先讓他睡」之後還生氣的。願意這樣判斷的家長，老師心裡會記得。</p>
+
+  <p>第二，更重要的是——<strong>一個睡飽的孩子，第二天早上寫功課的速度是十一點那個的三到五倍</strong>。我們在補習班看過好幾次：頭天請假沒寫的孩子，隔天到班 30 分鐘就把昨天和今天的都解決了。十一點的那兩個小時，根本不該存在。</p>
+
+  <p>那位媽媽後來照做了。第三天她傳訊息給我：「老師，他昨晚九點半就睡了，今天早上六點半自己起來把作業寫完。⋯⋯我很久沒看過他這樣。」</p>
+
+  <h2>順序顛倒了，方法都沒用</h2>
+
+  <p>家長很常問「有什麼方法可以讓他寫快一點」。其實方法很多本來就有用，但前提是——孩子處在<strong>能聽進去的狀態</strong>。</p>
+
+  <p>十一點不是那個狀態。下午四點剛放學、肚子餓、頭暈、心煩，也不是。要在他「能聽」的時候才談方法。其他時候，先處理身體狀況、先處理情緒、先讓他睡。順序顛倒了，再多方法都接不上。</p>
+
+  <p>所以下次又寫到十一點，先別急著找原因。把燈關小，明天再說。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    正向教養 · 寫功課 · 兒童睡眠 · 情緒接納 · 親子溝通 · 收兵 · 不評價的陪伴
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-13_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>

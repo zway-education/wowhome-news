@@ -1,0 +1,18 @@
+# auto-generated — only wowhome_*.html and index.html are published
+*.log
+push_log.txt
+*.tmp
+*.bak
+Thumbs.db
+desktop.ini
+_brand_intro.md
+_huahong_voice.md
+_topic_log.md
+_wowhome_skill.md
+SETUP.md
+README.md
+wowhome_push.py
+auto_push.ps1
+_install_wowhome_task.ps1
+_封存/
+system-commandline-sentinel-files/

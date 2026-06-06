@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「他先打我的！」——孩子吵架，先別急著當法官｜華鴻文理補習班</title>
+<meta name="description" content="孩子吵架，家長最常做的就是衝過去問「誰先開始的」，然後各打五十大板。但這樣孩子學到的不是怎麼和好，而是怎麼把爸媽拉到自己這邊。與其當法官，不如當翻譯——先把兩個孩子的感受說出來。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:    #b8202e;
+    --brand-dk: #8c1520;
+    --gold:     #d4a017;
+    --gold-lt:  #fdf3d7;
+    --bg:       #fafaf8;
+    --paper:    #ffffff;
+    --ink:      #1a1a1a;
+    --ink2:     #4a4a4a;
+    --ink3:     #8a8a8a;
+    --line:     #e8e4de;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.9; font-size: 17px; }
+  h1, h2, h3, .sans, .brand-name, .axis-tag, .meta-row, .back-btn { font-family: 'Noto Sans TC', Arial, sans-serif; }
+  .topbar {
+    background: linear-gradient(135deg, #8c1520 0%, #b8202e 55%, #c9920a 100%);
+    padding: 0 32px;
+    height: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(140,21,32,0.35);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: #f5c842; color: #8c1520;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .brand-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  .back-btn {
+    color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 5px 14px; border-radius: 5px;
+    transition: all .15s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  article { max-width: 720px; margin: 0 auto; padding: 52px 28px 72px; }
+  .meta-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink3); flex-wrap: wrap;
+  }
+  .axis-tag {
+    background: var(--gold-lt); color: #b38a00;
+    padding: 3px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  }
+  h1.title {
+    font-size: 30px; font-weight: 900; color: var(--ink);
+    line-height: 1.4; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 16px; color: var(--ink2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-lt);
+    margin: 28px 0 36px;
+  }
+  article p { margin: 20px 0; color: var(--ink2); }
+  article p strong { color: var(--brand); }
+  article h2 {
+    font-size: 20px; font-weight: 800; color: var(--ink);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+  article h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 18px;
+    background: var(--brand);
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  blockquote {
+    margin: 28px 0; padding: 18px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    color: var(--ink2);
+    font-style: italic;
+  }
+  blockquote::before {
+    content: '"';
+    font-size: 32px; color: var(--brand);
+    line-height: 0; vertical-align: -6px;
+    margin-right: 6px; font-family: Georgia, serif;
+  }
+  .endnote {
+    margin-top: 52px; padding: 20px 24px;
+    background: var(--gold-lt);
+    border: 1px solid #e8d080;
+    border-top: 3px solid var(--gold);
+    font-size: 13px; color: var(--ink3);
+    text-align: center;
+  }
+  .endnote strong {
+    color: #b38a00; display: block;
+    margin-bottom: 6px; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .footer-card {
+    max-width: 720px; margin: 0 auto 56px;
+    padding: 28px 24px;
+    background: var(--brand); color: #fff;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+  }
+  .footer-card h3 { font-size: 15px; margin-bottom: 8px; color: var(--gold); font-family: 'Noto Sans TC', sans-serif; letter-spacing: 1px; }
+  .footer-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  @media (max-width: 640px) {
+    .topbar { padding: 0 16px; }
+    article { padding: 36px 20px 52px; }
+    h1.title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+
+  /* 分享按鈕（右下角浮動） */
+  .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(184,32,46,0.88);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.2);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.3);}
+  .share-fab:hover{background:rgba(184,32,46,1);transform:scale(1.08);}
+  .share-fab svg{width:20px;height:20px;fill:#fff;display:block;}
+  .share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8c1520;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+  .share-fab:hover::after{opacity:1;}
+  @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">華</div>
+    <div class="brand-name">華鴻文理補習班</div>
+  </a>
+  <a class="back-btn" href="index.html">← 回首頁</a>
+</header>
+
+<article>
+  <div class="meta-row">
+    <span class="axis-tag">家長焦慮FAQ</span>
+    <span>2026-05-20</span>
+    <span>·</span>
+    <span>寫給一般教養家長</span>
+  </div>
+  <h1 class="title">「他先打我的！」——孩子吵架，先別急著當法官</h1>
+
+  <div class="lead">
+    「我家兩個一天到晚吵，吵到我都想自己躲起來。」這是最近被問最多的一句話。但孩子吵架不一定是壞事——真正卡住家長的，其實是「我每次都得跳下去當法官」這件事。
+  </div>
+
+  <p>最近被家長問最多的一個問題，不是功課，也不是考試，而是這句：「老師，我家兩個小孩一天到晚吵架，到底怎麼辦？」</p>
+
+  <p>問這句話的家長，通常已經很累了。有的是姊姊和弟弟，有的是兩兄弟，年紀差個兩三歲。場景大同小異——一個玩具、一個位子、一句「你很煩耶」，不到五分鐘就升級成大哭、告狀，甚至動手。</p>
+
+  <p>但如果仔細聽家長描述，會發現真正讓人崩潰的，往往不是「孩子吵架」這件事，而是後面那句：「然後我就要過去處理。」</p>
+
+  <h2>「當法官」為什麼會越判越糟</h2>
+
+  <p>處理通常長這樣：家長衝過去，問「誰先開始的？」兩個孩子立刻搶著喊「他先！」家長聽完兩邊各說各話，最後只能各打五十大板，或者憑印象判一句「你是哥哥，要讓弟弟」。判完，被判輸的那個更不服氣，下次吵得更兇。</p>
+
+  <p>問題就在這裡。<strong>當家長一次又一次跳進去當法官，孩子學到的不是「怎麼和好」，而是「怎麼把爸媽拉到我這邊」。</strong>告狀變成一種策略，吵架變成一場爭取裁判的比賽。</p>
+
+  <p>所以在補習班遇到孩子起衝突，我們會先做一件事：不急著判對錯，先把兩個人的「感受」說出來。</p>
+
+  <p>這不是和稀泥。孩子吵架的當下，腦袋是被情緒淹住的，他根本說不清楚自己為什麼那麼生氣。如果這時候大人只忙著查「誰先動手」，等於跳過了最重要的一步——讓孩子先看懂自己怎麼了。</p>
+
+  <h2>把「法官」換成「翻譯」</h2>
+
+  <p>與其當法官，不如當翻譯。</p>
+
+  <p>翻譯做的事很單純，就是把兩個孩子各自的狀態講出來，讓對方聽見：「咪咪，你是不是覺得球球沒問過你就拿走你的筆，很不被尊重？」「球球，你是不是只是想借一下，沒想到姊姊會這麼生氣？」</p>
+
+  <blockquote>
+    你會發現，光是「被說中了」，孩子的火氣就消了一半。他要的常常不是贏，而是「有人知道我剛剛有多氣」。
+  </blockquote>
+
+  <p>說完雙方的感受，再把球丟回去：「那你們想怎麼辦？」這句話很關鍵——不是大人給答案，是讓他們自己生出辦法。第一次講不出來也沒關係，大人可以提示「要不要輪流」「要不要先借三分鐘」，但決定權留給孩子。</p>
+
+  <h2>家裡可以怎麼做</h2>
+
+  <p>如果你家也天天上演這齣，可以從三個小調整開始。</p>
+
+  <p>第一，<strong>不再問「誰先開始的」。</strong>這句話幾乎沒有用，只會引發互相指控。改問「現在發生什麼事？」讓兩個人各自描述，而不是各自告狀。</p>
+
+  <p>第二，<strong>只要沒有危險，給他們一點時間自己喬。</strong>不是放著不管，是站遠一點觀察。很多衝突大人不插手，孩子三分鐘就自己和好了——他們需要的是練習的機會，不是仲裁。</p>
+
+  <p>第三，<strong>事後不翻舊帳。</strong>吵完、和好了，就讓它過去。一直唸「你看你們又吵」，反而把「我們是一對愛吵架的兄妹」這個標籤貼得更牢。</p>
+
+  <p>手足吵架不會消失，它本來就是孩子練習人際關係最早、也最安全的場域。在家裡跟兄弟姊妹吵過、又和好過的孩子，到了學校面對同學的摩擦，往往更有辦法。</p>
+
+  <p>所以下次他們又吵起來，先深呼吸——你不一定要當那個判輸贏的法官。先看懂兩個孩子各自卡在哪，剩下的，他們比你想像中更有能力自己解決。</p>
+
+  <div class="endnote">
+    <strong>關鍵字</strong>
+    家長焦慮FAQ · 手足吵架 · 衝突解決 · 不當法官 · 情緒翻譯 · 兄弟姊妹相處 · 正向教養
+  </div>
+</article>
+
+<div class="footer-card">
+  <h3>華鴻文理補習班</h3>
+  <p>會讀書，也要會做人。先有動機，再談成績。<br>
+  國小安親 · 國中課輔 · 兒童美語 · 語文素養</p>
+</div>
+<a class="share-fab" href="wowhome_2026-05-20_share.png" download title="下載 IG/FB 分享圖" aria-label="下載分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</a>
+</body>
+</html>
